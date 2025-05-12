@@ -6,7 +6,7 @@ This website is built with [Hugo](https://gohugo.io/), a fast static site genera
 
 ## Features
 
-- 🌐 Multilingual support (English, Russian, Chinese)
+- 🌐 Multilingual support (English, Russian)
 - 🎯 High conversion focused design
 - 📱 Fully responsive (mobile, tablet, desktop)
 - 🚀 Optimized for Google PageSpeed (Performance, SEO, Accessibility, Best Practices)
@@ -25,7 +25,7 @@ This website is built with [Hugo](https://gohugo.io/), a fast static site genera
 
 1. Clone the repository
 ```
-git clone https://github.com/sergeypbelov/website.git
+git clone https://github.com/kaimi-/belov.expert.git
 cd website
 ```
 
