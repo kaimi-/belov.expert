@@ -9,6 +9,8 @@
   translation: "Connect"
 - id: footerTagline
   translation: "Enterprise cybersecurity expertise for your organization"
+- id: name
+  translation: "Sergey Belov"
 
 # Header
 - id: home
@@ -38,7 +40,7 @@
 - id: aboutMe
   translation: "About Me"
 - id: expertiseList
-  translation: "Zero Trust Architecture,Cloud Security,APT Defense,SIEM Implementation,Security Automation,DevSecOps Integration,Ransomware Protection,IoT & OT Security"
+  translation: "Zero Trust Architecture,Cloud Security,APT Defense,OSINT,Security Automation,DevSecOps Integration,Ransomware Protection,IoT Security"
 
 # Services Section
 - id: services
@@ -83,6 +85,8 @@
   translation: "Recent articles, interviews, and insights on cybersecurity trends"
 - id: viewAllPublications
   translation: "View All Publications"
+- id: hidePublications
+  translation: "Hide Publications"
 - id: readArticle
   translation: "Read Article"
 

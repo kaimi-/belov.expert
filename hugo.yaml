@@ -34,11 +34,20 @@ languages:
 
 params:
   author: "Sergey Belov"
+  # Contact information
+  contact:
+    email: "sergey@belov.expert"
+  # Publications display settings
+  publications:
+    defaultDisplay: 6  # Number of publications to show initially
   # Social links
   social:
     linkedin: "https://linkedin.com/in/sergeypbelov"
     twitter: "https://twitter.com/sergeypbelov"
     github: "https://github.com/sergeypbelov"
+    telegram: "https://t.me/sergeypbelov"
+    instagram: "https://instagram.com/sergeypbelov"
+    blog: "https://blog.sergeybelov.com"
   # Calendly link
   calendly: "https://calendly.com/sergeypbelov"
   # Header and meta configurations

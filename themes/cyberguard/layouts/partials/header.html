@@ -3,11 +3,10 @@
         <div class="header-inner">
             <div class="logo">
                 <a href="{{ .Site.Home.RelPermalink }}" aria-label="Home">
-                    {{ if .Site.Params.header.logo }}
-                    <img src="{{ .Site.Params.header.logo | relURL }}" alt="{{ .Site.Title }}" width="180" height="40">
-                    {{ else }}
-                    <span class="site-title">{{ .Site.Title }}</span>
-                    {{ end }}
+                    <div class="text-logo">
+                        <div class="text-logo-name">{{ i18n "name" }}</div>
+                        <div class="text-logo-title">{{ i18n "cybersecurityExpert" }}</div>
+                    </div>
                 </a>
             </div>
             
@@ -17,7 +16,7 @@
                     {{ range .Site.Menus.main }}
                     <li class="{{ if $currentPage.IsMenuCurrent "main" . }}active{{ end }}">
                         <a href="{{ .URL | relLangURL }}" {{ if strings.HasPrefix .URL "http" }}target="_blank" rel="noopener"{{ end }}>
-                            {{ .Name }}
+                            {{ i18n .Identifier | default .Name }}
                         </a>
                     </li>
                     {{ end }}
