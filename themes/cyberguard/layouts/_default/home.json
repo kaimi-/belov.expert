@@ -1,0 +1,35 @@
+{
+    "version": "1.0",
+    "title": {{ .Site.Title | jsonify }},
+    "language": {{ .Site.Language.Lang | jsonify }},
+    "url": {{ .Permalink | jsonify }},
+    "description": {{ .Site.Params.description | jsonify }},
+    "lastUpdated": {{ now.Format "2006-01-02T15:04:05-07:00" | jsonify }},
+    "sections": [
+        {
+            "id": "about",
+            "title": {{ (i18n "aboutMe") | jsonify }},
+            "content": {{ .Content | plainify | jsonify }}
+        },
+        {
+            "id": "services",
+            "title": {{ (i18n "services") | jsonify }}
+        },
+        {
+            "id": "publications",
+            "title": {{ (i18n "publications") | jsonify }},
+            "items": [
+                {{ $publications := index .Site.Data .Site.Language.Lang "publications" }}
+                {{ range $index, $publication := $publications }}
+                {{ if $index }}, {{ end }}
+                {
+                    "title": {{ .title | jsonify }},
+                    "media": {{ .media | jsonify }},
+                    "url": {{ .url | jsonify }},
+                    "date": {{ .date | jsonify }}
+                }
+                {{ end }}
+            ]
+        }
+    ]
+} 

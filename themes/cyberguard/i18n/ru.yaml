@@ -1,0 +1,103 @@
+# General
+- id: languageName
+  translation: "Русский"
+- id: allRightsReserved
+  translation: "Все права защищены"
+- id: navigation
+  translation: "Навигация"
+- id: connect
+  translation: "Связаться"
+- id: footerTagline
+  translation: "Экспертиза кибербезопасности для вашей организации"
+
+# Header
+- id: home
+  translation: "Главная"
+- id: about
+  translation: "Обо мне"
+- id: services
+  translation: "Услуги"
+- id: publications
+  translation: "Публикации"
+- id: contact
+  translation: "Контакты"
+
+# Hero Section
+- id: heroTitle
+  translation: "Защита корпоративных систем от продвинутых угроз"
+- id: heroSubtitle
+  translation: "Экспертные консультационные услуги по кибербезопасности для предприятий, стремящихся защитить свои критически важные активы, минимизировать риски и обеспечить соответствие нормативным требованиям."
+- id: learnMore
+  translation: "Подробнее"
+- id: bookMeeting
+  translation: "Запланировать встречу"
+- id: cybersecurityExpert
+  translation: "Эксперт по кибербезопасности"
+
+# About Section
+- id: aboutMe
+  translation: "Обо мне"
+- id: expertiseList
+  translation: "Архитектура нулевого доверия,Облачная безопасность,Защита от APT,Внедрение SIEM,Автоматизация безопасности,Интеграция DevSecOps,Защита от программ-вымогателей,Безопасность IoT и OT"
+
+# Services Section
+- id: services
+  translation: "Услуги"
+- id: servicesSubtitle
+  translation: "Комплексные решения по кибербезопасности, адаптированные к потребностям предприятий"
+
+- id: strategyTitle
+  translation: "Стратегия и консультации по безопасности"
+- id: strategyDesc
+  translation: "Разработка комплексных дорожных карт безопасности, согласованных с бизнес-целями"
+
+- id: threatTitle
+  translation: "Анализ угроз и управление уязвимостями"
+- id: threatDesc
+  translation: "Выявление и снижение потенциальных угроз до того, как они повлияют на ваш бизнес"
+
+- id: secArchTitle
+  translation: "Обзор архитектуры безопасности"
+- id: secArchDesc
+  translation: "Проектирование и проверка безопасных системных архитектур"
+
+- id: pentestTitle
+  translation: "Тестирование на проникновение"
+- id: pentestDesc
+  translation: "Выявление уязвимостей с помощью имитации кибератак"
+
+- id: complianceTitle
+  translation: "Управление соответствием и рисками"
+- id: complianceDesc
+  translation: "Навигация по сложным нормативным требованиям при одновременном усилении позиции безопасности"
+
+- id: trainingTitle
+  translation: "Обучение и осведомленность о безопасности"
+- id: trainingDesc
+  translation: "Создание культуры осведомленности о безопасности в вашей организации"
+
+# Publications Section
+- id: publications
+  translation: "Публикации"
+- id: publicationsSubtitle
+  translation: "Недавние статьи, интервью и аналитика о тенденциях кибербезопасности"
+- id: viewAllPublications
+  translation: "Просмотреть все публикации"
+- id: readArticle
+  translation: "Читать статью"
+
+# Contact Section
+- id: contact
+  translation: "Контакты"
+- id: contactSubtitle
+  translation: "Свяжитесь со мной, чтобы обсудить ваши потребности в кибербезопасности"
+- id: getInTouch
+  translation: "Связаться"
+- id: contactDesc
+  translation: "Я доступен для консультационных проектов, выступлений и оценки безопасности. Свяжитесь со мной, чтобы обсудить, как я могу помочь защитить критически важные активы вашей организации."
+- id: scheduleCall
+  translation: "Запланировать звонок"
+- id: bookConsultation
+  translation: "Запланировать консультацию"
+- id: bookConsultationDesc
+  translation: "Запланируйте 30-минутную консультацию, чтобы обсудить ваши проблемы кибербезопасности и как я могу помочь." 

@@ -1,0 +1,103 @@
+# General
+- id: languageName
+  translation: "English"
+- id: allRightsReserved
+  translation: "All rights reserved"
+- id: navigation
+  translation: "Navigation"
+- id: connect
+  translation: "Connect"
+- id: footerTagline
+  translation: "Enterprise cybersecurity expertise for your organization"
+
+# Header
+- id: home
+  translation: "Home"
+- id: about
+  translation: "About"
+- id: services
+  translation: "Services"
+- id: publications
+  translation: "Publications"
+- id: contact
+  translation: "Contact"
+
+# Hero Section
+- id: heroTitle
+  translation: "Securing Enterprise Systems Against Advanced Threats"
+- id: heroSubtitle
+  translation: "Expert cybersecurity consulting services for enterprise organizations looking to protect their critical assets, minimize risks, and ensure regulatory compliance."
+- id: learnMore
+  translation: "Learn More"
+- id: bookMeeting
+  translation: "Book a Meeting"
+- id: cybersecurityExpert
+  translation: "Cybersecurity Expert"
+
+# About Section
+- id: aboutMe
+  translation: "About Me"
+- id: expertiseList
+  translation: "Zero Trust Architecture,Cloud Security,APT Defense,SIEM Implementation,Security Automation,DevSecOps Integration,Ransomware Protection,IoT & OT Security"
+
+# Services Section
+- id: services
+  translation: "Services"
+- id: servicesSubtitle
+  translation: "Comprehensive cybersecurity solutions tailored to enterprise needs"
+
+- id: strategyTitle
+  translation: "Security Strategy & Advisory"
+- id: strategyDesc
+  translation: "Develop comprehensive security roadmaps aligned with business objectives"
+
+- id: threatTitle
+  translation: "Threat Intelligence & Vulnerability Management"
+- id: threatDesc
+  translation: "Identify and mitigate potential threats before they impact your business"
+
+- id: secArchTitle
+  translation: "Security Architecture Review"
+- id: secArchDesc
+  translation: "Design and validate secure system architectures"
+
+- id: pentestTitle
+  translation: "Penetration Testing"
+- id: pentestDesc
+  translation: "Identify vulnerabilities through simulated cyber attacks"
+
+- id: complianceTitle
+  translation: "Compliance & Risk Management"
+- id: complianceDesc
+  translation: "Navigate complex regulatory requirements while strengthening security posture"
+
+- id: trainingTitle
+  translation: "Security Training & Awareness"
+- id: trainingDesc
+  translation: "Build a culture of security awareness within your organization"
+
+# Publications Section
+- id: publications
+  translation: "Publications"
+- id: publicationsSubtitle
+  translation: "Recent articles, interviews, and insights on cybersecurity trends"
+- id: viewAllPublications
+  translation: "View All Publications"
+- id: readArticle
+  translation: "Read Article"
+
+# Contact Section
+- id: contact
+  translation: "Contact"
+- id: contactSubtitle
+  translation: "Get in touch to discuss your cybersecurity needs"
+- id: getInTouch
+  translation: "Get in Touch"
+- id: contactDesc
+  translation: "I'm available for consulting engagements, speaking opportunities, and security assessments. Reach out to discuss how I can help protect your organization's critical assets."
+- id: scheduleCall
+  translation: "Schedule a call"
+- id: bookConsultation
+  translation: "Book a Consultation"
+- id: bookConsultationDesc
+  translation: "Schedule a 30-minute consultation to discuss your cybersecurity challenges and how I can help." 

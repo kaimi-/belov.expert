@@ -1,0 +1,34 @@
+{
+  "name": "sergey-belov-website",
+  "version": "1.0.0",
+  "description": "Sergey Belov's professional cybersecurity website",
+  "main": "index.js",
+  "scripts": {
+    "dev": "hugo server -D",
+    "build": "hugo --minify",
+    "clean": "rm -rf public resources",
+    "lint": "stylelint \"**/*.css\" --fix",
+    "format": "prettier --write \"**/*.{js,css,md,yaml,yml}\"",
+    "optimize": "npm run optimize:images",
+    "optimize:images": "hugo && find public -type f -name '*.jpg' -o -name '*.png' -o -name '*.webp' | xargs -P 8 -I {} imagemin {} --out-dir={}",
+    "deploy": "hugo --minify && rsync -avz --delete public/ user@example.com:/path/to/webroot/"
+  },
+  "keywords": [
+    "cybersecurity",
+    "hugo",
+    "static-site",
+    "enterprise",
+    "consulting"
+  ],
+  "author": "Sergey Belov",
+  "license": "MIT",
+  "devDependencies": {
+    "autoprefixer": "^10.4.14",
+    "cssnano": "^6.0.1",
+    "imagemin-cli": "^7.0.0",
+    "postcss": "^8.4.24",
+    "prettier": "^2.8.8",
+    "stylelint": "^15.6.3",
+    "stylelint-config-standard": "^33.0.0"
+  }
+} 

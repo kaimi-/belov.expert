@@ -1,0 +1,24 @@
+User-agent: *
+{{ if eq (getenv "HUGO_ENV") "production" -}}
+Allow: /
+{{- else -}}
+Disallow: /
+{{- end }}
+
+# Sitemaps
+Sitemap: {{ "sitemap.xml" | absURL }}
+
+# Prevent crawling of certain paths
+Disallow: /js/
+Disallow: /css/
+Disallow: /fonts/
+Disallow: /images/media-logos/
+Disallow: /images/social/
+
+# Allow Google to access everything
+User-agent: Googlebot
+Allow: /
+
+# Allow Bingbot to access everything  
+User-agent: Bingbot
+Allow: / 

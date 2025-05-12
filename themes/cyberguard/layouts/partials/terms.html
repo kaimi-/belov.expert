@@ -1,0 +1,16 @@
+{{ $taxonomy := .taxonomy }}
+{{ $terms := .page.GetTerms $taxonomy }}
+{{ if $terms }}
+<div class="taxonomy-terms">
+    <div class="taxonomy-title">{{ i18n $taxonomy | default (humanize $taxonomy) }}:</div>
+    <ul class="terms-list">
+        {{ range $terms }}
+        <li class="term-item">
+            <a href="{{ .RelPermalink }}" class="term-link">
+                {{ .LinkTitle }}
+            </a>
+        </li>
+        {{ end }}
+    </ul>
+</div>
+{{ end }} 

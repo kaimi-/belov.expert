@@ -1,0 +1,105 @@
+baseURL: "https://sergeybelov.com/"
+languageCode: "en-us"
+title: "Sergey Belov | Cybersecurity Expert"
+theme: "cyberguard"
+
+# Enable minification for production
+minify:
+  disableCSS: false
+  disableHTML: false
+  disableJS: false
+  disableJSON: false
+  disableSVG: false
+  disableXML: false
+  minifyOutput: true
+
+# Enable multilingual support
+defaultContentLanguage: "en"
+defaultContentLanguageInSubdir: false
+
+# Language configuration
+languages:
+  en:
+    languageName: "English"
+    weight: 1
+    title: "Sergey Belov | Cybersecurity Expert"
+    params:
+      description: "Professional cybersecurity services for enterprise companies by Sergey Belov"
+  ru:
+    languageName: "Русский"
+    weight: 2
+    title: "Сергей Белов | Эксперт по кибербезопасности"
+    params:
+      description: "Профессиональные услуги по кибербезопасности для корпоративных клиентов от Сергея Белова"
+
+params:
+  author: "Sergey Belov"
+  # Social links
+  social:
+    linkedin: "https://linkedin.com/in/sergeypbelov"
+    twitter: "https://twitter.com/sergeypbelov"
+    github: "https://github.com/sergeypbelov"
+  # Calendly link
+  calendly: "https://calendly.com/sergeypbelov"
+  # Header and meta configurations
+  header:
+    logo: "images/logo.svg"
+  # SEO settings
+  seo:
+    enableOpenGraph: true
+    enableTwitterCards: true
+    enableSchemaOrg: true
+  # Analytics
+  googleAnalytics: "G-XXXXXXXXXX"
+
+# Navigation menu
+menu:
+  main:
+    - identifier: "home"
+      name: "Home"
+      url: "/"
+      weight: 1
+    - identifier: "about"
+      name: "About"
+      url: "/#about"
+      weight: 2
+    - identifier: "publications"
+      name: "Publications"
+      url: "/#publications"
+      weight: 3
+    - identifier: "contact"
+      name: "Contact"
+      url: "/#contact"
+      weight: 4
+
+# Taxonomies
+taxonomies:
+  tag: "tags"
+  category: "categories"
+
+# Enable syntax highlighting
+markup:
+  highlight:
+    codeFences: true
+    guessSyntax: true
+    lineNos: false
+    style: "monokai"
+
+# Output formats
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
+
+# Caching for improved build time
+caches:
+  assets:
+    dir: ":resourceDir/_gen"
+    maxAge: "720h"
+  images:
+    dir: ":resourceDir/_gen"
+    maxAge: "720h"
+  modules:
+    dir: ":resourceDir/_gen"
+    maxAge: "720h"

@@ -1,0 +1,53 @@
+<header class="site-header">
+    <div class="container">
+        <div class="header-inner">
+            <div class="logo">
+                <a href="{{ .Site.Home.RelPermalink }}" aria-label="Home">
+                    {{ if .Site.Params.header.logo }}
+                    <img src="{{ .Site.Params.header.logo | relURL }}" alt="{{ .Site.Title }}" width="180" height="40">
+                    {{ else }}
+                    <span class="site-title">{{ .Site.Title }}</span>
+                    {{ end }}
+                </a>
+            </div>
+            
+            <nav class="main-nav">
+                <ul>
+                    {{ $currentPage := . }}
+                    {{ range .Site.Menus.main }}
+                    <li class="{{ if $currentPage.IsMenuCurrent "main" . }}active{{ end }}">
+                        <a href="{{ .URL | relLangURL }}" {{ if strings.HasPrefix .URL "http" }}target="_blank" rel="noopener"{{ end }}>
+                            {{ .Name }}
+                        </a>
+                    </li>
+                    {{ end }}
+                    
+                    <!-- Language Switcher -->
+                    {{ if .IsTranslated }}
+                    <li class="language-switcher">
+                        <div class="dropdown">
+                            <button class="dropdown-toggle" aria-haspopup="true" aria-expanded="false">
+                                {{ .Site.Language.LanguageName }} <span class="icon-chevron-down"></span>
+                            </button>
+                            <ul class="dropdown-menu">
+                                {{ range .Translations }}
+                                <li><a href="{{ .Permalink }}">{{ .Language.LanguageName }}</a></li>
+                                {{ end }}
+                                <li><a href="{{ .Site.Home.Permalink }}">{{ .Site.Language.LanguageName }}</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    {{ end }}
+                    
+                    <li class="cta-button">
+                        <a href="{{ .Site.Params.calendly }}" target="_blank" rel="noopener" class="btn btn-primary">{{ i18n "bookMeeting" | default "Book a Meeting" }}</a>
+                    </li>
+                </ul>
+            </nav>
+            
+            <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                <span class="hamburger"></span>
+            </button>
+        </div>
+    </div>
+</header> 
