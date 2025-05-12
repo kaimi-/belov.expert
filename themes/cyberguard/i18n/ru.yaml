@@ -8,7 +8,7 @@
 - id: connect
   translation: "Связаться"
 - id: footerTagline
-  translation: "Экспертиза кибербезопасности для вашей компании"
+  translation: "Экспертиза кибербезопасности для вашего бизнеса"
 - id: name
   translation: "Сергей Белов"
 
@@ -26,9 +26,9 @@
 
 # Hero Section
 - id: heroTitle
-  translation: "Защита корпоративных систем от продвинутых угроз"
+  translation: "Защита бизнеса от продвинутых угроз"
 - id: heroSubtitle
-  translation: "Экспертные консультационные услуги по кибербезопасности для компаний, стремящихся защитить свои активы, минимизировать риски и обеспечить соответствие нормативным требованиям."
+  translation: "Услуги в области кибербезопасности для компаний, стремящихся защитить свои активы, минимизировать риски и обеспечить соответствие нормативным требованиям."
 - id: learnMore
   translation: "Подробнее"
 - id: bookMeeting
@@ -36,11 +36,6 @@
 - id: cybersecurityExpert
   translation: "Эксперт по кибербезопасности"
 
-# About Section
-- id: aboutMe
-  translation: "Сферы экспертизы"
-- id: expertiseList
-  translation: "Архитектура нулевого доверия,Облачная безопасность,Защита от APT,OSINT,Автоматизация безопасности,Интеграция DevSecOps,Защита от программ-вымогателей,Безопасность IoT"
 
 # Services Section
 - id: services
@@ -89,6 +84,22 @@
   translation: "Скрыть публикации"
 - id: readArticle
   translation: "Читать статью"
+
+# Certifications Section
+- id: certifications
+  translation: "Сертификаты"
+- id: certificationsSubtitle
+  translation: "Профессиональные сертификаты"
+- id: burpTitle
+  translation: "Burp Suite Certified Practitioner"
+- id: cehTitle
+  translation: "Certified Ethical Hacker"
+- id: ecsaTitle
+  translation: "EC-Council Certified Security Analyst"
+- id: oscpTitle
+  translation: "Offensive Security Certified Professional"
+- id: osweTitle
+  translation: "Offensive Security Web Expert"
 
 # Contact Section
 - id: contact

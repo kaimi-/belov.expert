@@ -614,57 +614,6 @@ hr {
     width: 100%;
 }
 
-/* About Section */
-.about-content {
-    display: flex;
-    align-items: flex-start;
-    gap: 4rem;
-}
-
-.about-image {
-    flex: 1;
-    position: relative;
-}
-
-.about-image img {
-    border-radius: var(--border-radius);
-    box-shadow: var(--shadow);
-}
-
-.about-text {
-    flex: 1;
-}
-
-.about-text h2 {
-    margin-bottom: 1.5rem;
-}
-
-.about-text p {
-    margin-bottom: 1.5rem;
-}
-
-.skill-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-    gap: 1rem;
-    margin-top: 2rem;
-}
-
-.skill-item {
-    background-color: var(--color-light);
-    padding: 1rem;
-    border-radius: var(--border-radius);
-    display: flex;
-    align-items: center;
-}
-
-.skill-item svg {
-    width: 24px;
-    height: 24px;
-    margin-right: 0.75rem;
-    color: var(--color-primary);
-}
-
 /* Services Section */
 .services-grid {
     display: grid;
@@ -710,6 +659,52 @@ hr {
 
 .service-description {
     color: var(--color-gray);
+}
+
+/* Certifications Section */
+.certifications-section {
+    background-color: var(--color-white);
+}
+
+.certifications-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 2rem;
+    justify-items: center;
+}
+
+.certification-card {
+    background-color: var(--color-white);
+    border-radius: var(--border-radius);
+    padding: 1.5rem;
+    transition: transform var(--transition), box-shadow var(--transition);
+    text-align: center;
+    width: 100%;
+    max-width: 220px;
+}
+
+.certification-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+}
+
+.certification-image {
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: center;
+}
+
+.certification-image img {
+    width: 140px;
+    height: auto;
+    object-fit: contain;
+}
+
+.certification-title {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-top: 1rem;
+    color: var(--color-dark);
 }
 
 /* Publications Section */
@@ -1049,11 +1044,6 @@ textarea.form-control {
         justify-content: center;
     }
     
-    .about-content {
-        flex-direction: column;
-        gap: 2rem;
-    }
-    
     .contact-content {
         flex-direction: column;
         gap: 3rem;
@@ -1177,8 +1167,12 @@ textarea.form-control {
         font-size: 1.125rem;
     }
     
-    .services-grid, .publications-grid {
+    .services-grid, .publications-grid, .certifications-grid {
         grid-template-columns: 1fr;
+    }
+    
+    .certification-card {
+        max-width: 100%;
     }
     
     .footer-inner {

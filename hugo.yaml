@@ -1,4 +1,4 @@
-baseURL: "https://sergeybelov.com/"
+baseURL: "https://belov.expert/"
 languageCode: "en-us"
 title: "Sergey Belov | Cybersecurity Expert"
 theme: "cyberguard"
@@ -42,17 +42,15 @@ params:
     defaultDisplay: 6  # Number of publications to show initially
   # Social links
   social:
-    linkedin: "https://linkedin.com/in/sergeypbelov"
-    twitter: "https://twitter.com/sergeypbelov"
-    github: "https://github.com/sergeypbelov"
-    telegram: "https://t.me/sergeypbelov"
-    instagram: "https://instagram.com/sergeypbelov"
-    blog: "https://blog.sergeybelov.com"
+    linkedin: "https://linkedin.com/in/bserg"
+    twitter: "https://twitter.com/kaimi_io"
+    github: "https://github.com/kaimi-"
+    telegram: "https://t.me/kaimi_io"
+    instagram: "https://www.instagram.com/kaimi_ru/"
+    blog: "https://kaimi.io/"
   # Calendly link
-  calendly: "https://calendly.com/sergeypbelov"
-  # Header and meta configurations
-  header:
-    logo: "images/logo.svg"
+  calendly: "https://calendly.com/sergey-belov/30min"
+
   # SEO settings
   seo:
     enableOpenGraph: true
@@ -68,9 +66,9 @@ menu:
       name: "Home"
       url: "/"
       weight: 1
-    - identifier: "about"
-      name: "About"
-      url: "/#about"
+    - identifier: "certifications"
+      name: "Certifications"
+      url: "/#certifications"
       weight: 2
     - identifier: "publications"
       name: "Publications"

@@ -7,36 +7,12 @@
                 <h1>{{ i18n "heroTitle" }}</h1>
                 <p>{{ i18n "heroSubtitle" }}</p>
                 <div class="hero-cta">
-                    <a href="#about" class="btn btn-primary">{{ i18n "learnMore" }}</a>
+                    <a href="#services" class="btn btn-primary">{{ i18n "learnMore" }}</a>
                     <a href="{{ .Site.Params.calendly }}" target="_blank" rel="noopener" class="btn btn-outline">{{ i18n "bookMeeting" }}</a>
                 </div>
             </div>
             <div class="hero-image animate-on-scroll">
                 <img src="{{ "images/hero-image.webp" | relURL }}" alt="{{ i18n "cybersecurityExpert" }}" width="600" height="450">
-            </div>
-        </div>
-    </div>
-</section>
-
-<section id="about" class="section about-section">
-    <div class="container">
-        <div class="about-content">
-            <div class="about-image animate-on-scroll">
-                <img src="{{ "images/about-image.webp" | relURL }}" alt="{{ .Site.Params.author }}" width="500" height="500">
-            </div>
-            <div class="about-text">
-                <div class="cyber-badge">{{ i18n "cybersecurityExpert" }}</div>
-                <h2>{{ i18n "aboutMe" }}</h2>
-                {{ .Content }}
-                
-                <div class="skill-list">
-                    {{ range $index, $skill := split (i18n "expertiseList") "," }}
-                    <div class="skill-item">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                        <span>{{ $skill }}</span>
-                    </div>
-                    {{ end }}
-                </div>
             </div>
         </div>
     </div>
@@ -96,6 +72,52 @@
                 </div>
                 <h3 class="service-title">{{ i18n "trainingTitle" }}</h3>
                 <p class="service-description">{{ i18n "trainingDesc" }}</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="certifications" class="section certifications-section">
+    <div class="container">
+        <div class="section-title">
+            <h2>{{ i18n "certifications" }}</h2>
+            <p>{{ i18n "certificationsSubtitle" }}</p>
+        </div>
+        
+        <div class="certifications-grid">
+            <div class="certification-card animate-on-scroll">
+                <div class="certification-image">
+                    <img src="{{ "images/badges/oscp.webp" | relURL }}" alt="{{ i18n "oscpTitle" }}" width="180" height="180">
+                </div>
+                <h3 class="certification-title">{{ i18n "oscpTitle" }}</h3>
+            </div>
+            
+            <div class="certification-card animate-on-scroll">
+                <div class="certification-image">
+                    <img src="{{ "images/badges/oswe.webp" | relURL }}" alt="{{ i18n "osweTitle" }}" width="180" height="180">
+                </div>
+                <h3 class="certification-title">{{ i18n "osweTitle" }}</h3>
+            </div>
+            
+            <div class="certification-card animate-on-scroll">
+                <div class="certification-image">
+                    <img src="{{ "images/badges/ceh.webp" | relURL }}" alt="{{ i18n "cehTitle" }}" width="180" height="180">
+                </div>
+                <h3 class="certification-title">{{ i18n "cehTitle" }}</h3>
+            </div>
+            
+            <div class="certification-card animate-on-scroll">
+                <div class="certification-image">
+                    <img src="{{ "images/badges/ecsa.webp" | relURL }}" alt="{{ i18n "ecsaTitle" }}" width="180" height="180">
+                </div>
+                <h3 class="certification-title">{{ i18n "ecsaTitle" }}</h3>
+            </div>
+            
+            <div class="certification-card animate-on-scroll">
+                <div class="certification-image">
+                    <img src="{{ "images/badges/burp.webp" | relURL }}" alt="{{ i18n "burpTitle" }}" width="180" height="180">
+                </div>
+                <h3 class="certification-title">{{ i18n "burpTitle" }}</h3>
             </div>
         </div>
     </div>

@@ -26,7 +26,7 @@
 
 # Hero Section
 - id: heroTitle
-  translation: "Securing Enterprise Systems Against Advanced Threats"
+  translation: "Securing Business Against Advanced Threats"
 - id: heroSubtitle
   translation: "Expert cybersecurity consulting services for enterprise organizations looking to protect their critical assets, minimize risks, and ensure regulatory compliance."
 - id: learnMore
@@ -35,12 +35,6 @@
   translation: "Book a Meeting"
 - id: cybersecurityExpert
   translation: "Cybersecurity Expert"
-
-# About Section
-- id: aboutMe
-  translation: "About Me"
-- id: expertiseList
-  translation: "Zero Trust Architecture,Cloud Security,APT Defense,OSINT,Security Automation,DevSecOps Integration,Ransomware Protection,IoT Security"
 
 # Services Section
 - id: services
@@ -89,6 +83,22 @@
   translation: "Hide Publications"
 - id: readArticle
   translation: "Read Article"
+
+# Certifications Section
+- id: certifications
+  translation: "Certifications"
+- id: certificationsSubtitle
+  translation: "Professional certifications"
+- id: burpTitle
+  translation: "Burp Suite Certified Practitioner"
+- id: cehTitle
+  translation: "Certified Ethical Hacker"
+- id: ecsaTitle
+  translation: "EC-Council Certified Security Analyst"
+- id: oscpTitle
+  translation: "Offensive Security Certified Professional"
+- id: osweTitle
+  translation: "Offensive Security Web Expert"
 
 # Contact Section
 - id: contact
