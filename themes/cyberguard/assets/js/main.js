@@ -50,6 +50,19 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Initialize animations
     initAnimations();
+
+    // Track language switches for analytics
+    const langButtons = document.querySelectorAll('.btn-lang');
+    langButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            // Get the language from the URL
+            const href = this.getAttribute('href');
+            const lang = href.includes('/ru/') ? 'ru' : 'en';
+            
+            // Set the cookie for future visits
+            setLanguagePreference(lang);
+        });
+    });
 });
 
 /**

@@ -24,16 +24,15 @@
                     <!-- Language Switcher -->
                     {{ if .IsTranslated }}
                     <li class="language-switcher">
-                        <div class="dropdown">
-                            <button class="dropdown-toggle" aria-haspopup="true" aria-expanded="false">
-                                {{ .Site.Language.LanguageName }} <span class="icon-chevron-down"></span>
-                            </button>
-                            <ul class="dropdown-menu">
-                                {{ range .Translations }}
-                                <li><a href="{{ .Permalink }}">{{ .Language.LanguageName }}</a></li>
+                        <div class="lang-switch-button">
+                            {{ $currentLang := .Site.Language.Lang }}
+                            {{ range .Translations }}
+                                {{ if eq $currentLang "en" }}
+                                <a href="{{ .Permalink }}" class="btn btn-outline btn-lang">EN / <span class="lang-alt">RU</span></a>
+                                {{ else }}
+                                <a href="{{ .Permalink }}" class="btn btn-outline btn-lang"><span class="lang-alt">EN</span> / RU</a>
                                 {{ end }}
-                                <li><a href="{{ .Site.Home.Permalink }}">{{ .Site.Language.LanguageName }}</a></li>
-                            </ul>
+                            {{ end }}
                         </div>
                     </li>
                     {{ end }}
