@@ -93,18 +93,6 @@
             <div class="copyright">
                 &copy; {{ now.Format "2006" }} {{ i18n "name" }}. {{ i18n "allRightsReserved" }}.
             </div>
-            <div class="language-select">
-                {{ $currentLang := .Site.Language.Lang }}
-                {{ range $.Site.Home.AllTranslations }}
-                    {{ if ne $currentLang .Language.Lang }}
-                        {{ if eq $currentLang "en" }}
-                        <a href="{{ .Permalink }}" class="btn btn-outline btn-lang footer-lang">EN / <span class="lang-alt">RU</span></a>
-                        {{ else }}
-                        <a href="{{ .Permalink }}" class="btn btn-outline btn-lang footer-lang"><span class="lang-alt">EN</span> / RU</a>
-                        {{ end }}
-                    {{ end }}
-                {{ end }}
-            </div>
         </div>
     </div>
 </footer> 
