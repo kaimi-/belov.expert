@@ -81,8 +81,20 @@ menu:
 
 # Taxonomies
 taxonomies:
-  tag: "tags"
-  category: "categories"
+  # Disable taxonomies by setting empty values
+  tag: ""
+  category: ""
+
+# Disable rendering of certain sections
+disableKinds:
+  - taxonomy
+  - term
+  - taxonomyTerm
+
+# Configure content types to disable
+ignoreFiles:
+  - "content/posts/.*"
+  - "content/.*/posts/.*"
 
 # Enable syntax highlighting
 markup:

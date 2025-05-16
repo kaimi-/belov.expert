@@ -2,7 +2,13 @@
 {{ printf `<?xml version="1.0" encoding="UTF-8"?>` | safeHTML }}
 <urlset {{ $xmlns }}>
   {{- range .Data.Pages }}
-  {{- if not .Params.sitemap_exclude }}
+  {{- if and 
+      (not .Params.sitemap_exclude) 
+      (ne .Section "posts") 
+      (ne .Type "taxonomy") 
+      (ne .Type "tags") 
+      (ne .Type "categories") 
+  -}}
   <url>
     <loc>{{ .Permalink }}</loc>
     {{- if not .Lastmod.IsZero }}
