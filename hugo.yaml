@@ -98,6 +98,20 @@ outputs:
     - HTML
     - RSS
     - JSON
+    - ROBOTS
+
+# Media types definition to support robots.txt
+mediaTypes:
+  application/robots+text:
+    suffixes:
+      - txt
+    
+outputFormats:
+  ROBOTS:
+    mediaType: application/robots+text
+    baseName: robots
+    isPlainText: true
+    notAlternative: true
 
 # Caching for improved build time
 caches:
