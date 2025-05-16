@@ -114,4 +114,14 @@
 - id: bookConsultation
   translation: "Book a Consultation"
 - id: bookConsultationDesc
-  translation: "Schedule a 30-minute consultation to discuss your cybersecurity challenges and how I can help." 
+  translation: "Schedule a 30-minute consultation to discuss your cybersecurity challenges and how I can help."
+
+# 404 Page
+- id: pageNotFoundTitle
+  translation: "Page Not Found"
+- id: pageNotFoundDesc
+  translation: "The page you are looking for might have been removed, had its name changed, or is temporarily unavailable."
+- id: goHome
+  translation: "Go Home"
+- id: goBack
+  translation: "Go Back"

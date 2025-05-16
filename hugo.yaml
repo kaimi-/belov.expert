@@ -89,7 +89,6 @@ taxonomies:
 disableKinds:
   - taxonomy
   - term
-  - taxonomyTerm
 
 # Configure content types to disable
 ignoreFiles:

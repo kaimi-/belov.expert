@@ -115,4 +115,14 @@
 - id: bookConsultation
   translation: "Запланировать консультацию"
 - id: bookConsultationDesc
-  translation: "Запланируйте 30-минутную консультацию, чтобы обсудить ваши проблемы и как я могу помочь." 
+  translation: "Запланируйте 30-минутную консультацию, чтобы обсудить ваши проблемы и как я могу помочь."
+
+# 404 Page
+- id: pageNotFoundTitle
+  translation: "Страница не найдена"
+- id: pageNotFoundDesc
+  translation: "Страница, которую вы ищете, могла быть удалена, переименована или временно недоступна."
+- id: goHome
+  translation: "На главную"
+- id: goBack
+  translation: "Назад"
