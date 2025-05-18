@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <!-- Outer ring -->
+  <circle cx="50" cy="50" r="48" stroke="#000" stroke-width="4" fill="none"/>
+  <!-- Black half+curve -->
+  <path d="M50 0
+           A50 50 0 0 1 50 100
+           A25 25 0 0 1 50 50
+           A25 25 0 0 0 50 0
+           Z" fill="#000"/>
+  <!-- Black dot in white area -->
+  <circle cx="50" cy="25" r="8" fill="#000"/>
+  <!-- Initials -->
+  <text x="54" y="74"
+        text-anchor="middle"
+        dominant-baseline="middle"
+        font-family="Arial, Helvetica, sans-serif"
+        font-size="30"
+        font-weight="700"
+        fill="#ffffff">SB</text>
+</svg>
