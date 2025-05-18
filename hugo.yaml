@@ -58,6 +58,7 @@ params:
     enableSchemaOrg: true
   # Analytics
   googleAnalytics: "G-X5Y7MHB693"
+  yandexMetrika: "89537405"
 
 # Navigation menu
 menu:
