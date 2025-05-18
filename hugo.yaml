@@ -57,7 +57,7 @@ params:
     enableTwitterCards: true
     enableSchemaOrg: true
   # Analytics
-  googleAnalytics: "G-XXXXXXXXXX"
+  googleAnalytics: "G-X5Y7MHB693"
 
 # Navigation menu
 menu:
