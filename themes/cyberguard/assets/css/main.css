@@ -735,9 +735,94 @@ hr {
     color: var(--color-dark);
 }
 
+/* Portfolio Section */
+.portfolio-section {
+    background-color: var(--color-light);
+    overflow: hidden;
+}
+
+.portfolio-grid {
+    display: flex;
+    gap: 2rem;
+    overflow-x: hidden;
+    width: 100%;
+}
+
+@keyframes scrollPortfolio {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.portfolio-card {
+    flex: 0 0 320px;
+    background-color: var(--color-white);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    transition: transform var(--transition), box-shadow var(--transition);
+    overflow: hidden;
+}
+
+.portfolio-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+}
+
+.portfolio-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 1.5rem;
+    text-decoration: none;
+    color: inherit;
+}
+
+.portfolio-logo {
+    margin-bottom: 0.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 140px;
+}
+
+.portfolio-logo img {
+    max-width: 100%;
+    max-height: 140px;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    transition: transform var(--transition);
+}
+
+.portfolio-link:hover .portfolio-logo img {
+    transform: scale(1.05);
+}
+
+.portfolio-content {
+    width: 100%;
+}
+
+.portfolio-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+    color: var(--color-dark);
+}
+
+.portfolio-description {
+    font-size: 0.95rem;
+    color: var(--color-gray);
+    line-height: 1.5;
+    margin-bottom: 0;
+}
+
 /* Publications Section */
 .publications-section {
-    background-color: var(--color-light);
+    background-color: var(--color-white);
 }
 
 .publications-wrapper {
@@ -1193,6 +1278,10 @@ textarea.form-control {
     
     .services-grid, .publications-grid, .certifications-grid {
         grid-template-columns: 1fr;
+    }
+    
+    .portfolio-card {
+        flex: 0 0 280px;
     }
     
     .certification-card {

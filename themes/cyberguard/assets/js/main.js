@@ -50,6 +50,9 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Initialize animations
     initAnimations();
+    
+    // Initialize portfolio carousel
+    initPortfolioCarousel();
 
     // Track language switches for analytics
     const langButtons = document.querySelectorAll('.btn-lang');
@@ -170,4 +173,100 @@ function getCookie(name) {
  */
 function setLanguagePreference(lang) {
     setCookie('preferred_lang', lang, 365);
+}
+
+/**
+ * Initialize portfolio carousel
+ */
+function initPortfolioCarousel() {
+    const portfolioGrid = document.querySelector('.portfolio-grid');
+    if (!portfolioGrid) return;
+    
+    const originalCards = Array.from(portfolioGrid.querySelectorAll('.portfolio-card'));
+    if (originalCards.length === 0) return;
+    
+    // Function to check if scrolling is needed
+    function checkAndEnableScrolling() {
+        // Get container width
+        const containerWidth = portfolioGrid.parentElement.offsetWidth;
+        
+        // Calculate total width of all items including gaps
+        const firstCard = originalCards[0];
+        const cardWidth = firstCard ? firstCard.offsetWidth : 320;
+        const computedStyle = window.getComputedStyle(portfolioGrid);
+        const gap = parseInt(computedStyle.gap) || 32;
+        const totalItemsWidth = (originalCards.length * cardWidth) + ((originalCards.length - 1) * gap);
+        
+        // Check if items overflow the container
+        const needsScrolling = totalItemsWidth > containerWidth;
+        
+        if (needsScrolling && originalCards.length > 1) {
+            // Enable animation with responsive duration
+            const animationDuration = window.innerWidth <= 768 ? '20s' : '30s';
+            portfolioGrid.style.animation = `scrollPortfolio ${animationDuration} linear infinite`;
+            
+            // Remove any existing duplicates first
+            const allCards = portfolioGrid.querySelectorAll('.portfolio-card');
+            allCards.forEach((card, index) => {
+                if (index >= originalCards.length) {
+                    card.remove();
+                }
+            });
+            
+            // Duplicate items for seamless scrolling
+            const fragment = document.createDocumentFragment();
+            originalCards.forEach(card => {
+                const clone = card.cloneNode(true);
+                fragment.appendChild(clone);
+            });
+            portfolioGrid.appendChild(fragment);
+            
+            // If still not enough items to fill 2x the width, duplicate again
+            const newTotalWidth = (originalCards.length * 2 * cardWidth) + ((originalCards.length * 2 - 1) * gap);
+            if (newTotalWidth < containerWidth * 2 && originalCards.length <= 3) {
+                originalCards.forEach(card => {
+                    const clone = card.cloneNode(true);
+                    portfolioGrid.appendChild(clone);
+                });
+            }
+            
+            // Add hover pause functionality
+            portfolioGrid.addEventListener('mouseenter', pauseAnimation);
+            portfolioGrid.addEventListener('mouseleave', resumeAnimation);
+        } else {
+            // Disable animation and center items
+            portfolioGrid.style.animation = 'none';
+            portfolioGrid.style.justifyContent = 'center';
+            
+            // Remove duplicates if any
+            const allCards = portfolioGrid.querySelectorAll('.portfolio-card');
+            allCards.forEach((card, index) => {
+                if (index >= originalCards.length) {
+                    card.remove();
+                }
+            });
+            
+            // Remove hover listeners
+            portfolioGrid.removeEventListener('mouseenter', pauseAnimation);
+            portfolioGrid.removeEventListener('mouseleave', resumeAnimation);
+        }
+    }
+    
+    function pauseAnimation() {
+        this.style.animationPlayState = 'paused';
+    }
+    
+    function resumeAnimation() {
+        this.style.animationPlayState = 'running';
+    }
+    
+    // Initial check
+    checkAndEnableScrolling();
+    
+    // Recheck on window resize
+    let resizeTimer;
+    window.addEventListener('resize', function() {
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(checkAndEnableScrolling, 250);
+    });
 }

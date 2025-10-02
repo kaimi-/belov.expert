@@ -123,6 +123,32 @@
     </div>
 </section>
 
+<section id="portfolio" class="section portfolio-section">
+    <div class="container">
+        <div class="section-title">
+            <h2>{{ i18n "portfolio" }}</h2>
+            <p>{{ i18n "portfolioSubtitle" }}</p>
+        </div>
+        
+        <div class="portfolio-grid">
+            {{ $portfolio := index .Site.Data .Site.Language.Lang "portfolio" }}
+            {{ range $portfolio }}
+            <div class="portfolio-card animate-on-scroll">
+                <a href="{{ .url }}" target="_blank" rel="noopener" class="portfolio-link">
+                    <div class="portfolio-logo">
+                        <img src="{{ .logo | relURL }}" alt="{{ .title }}">
+                    </div>
+                    <div class="portfolio-content">
+                        <h3 class="portfolio-title">{{ .title }}</h3>
+                        <p class="portfolio-description">{{ .description }}</p>
+                    </div>
+                </a>
+            </div>
+            {{ end }}
+        </div>
+    </div>
+</section>
+
 <section id="publications" class="section publications-section">
     <div class="container">
         <div class="section-title">

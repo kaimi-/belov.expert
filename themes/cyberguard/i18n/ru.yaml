@@ -101,6 +101,12 @@
 - id: osweTitle
   translation: "Offensive Security Web Expert"
 
+# Portfolio Section
+- id: portfolio
+  translation: "Портфолио"
+- id: portfolioSubtitle
+  translation: "Проекты и коллаборации"
+
 # Contact Section
 - id: contact
   translation: "Контакты"

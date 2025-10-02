@@ -100,6 +100,12 @@
 - id: osweTitle
   translation: "Offensive Security Web Expert"
 
+# Portfolio Section
+- id: portfolio
+  translation: "Portfolio"
+- id: portfolioSubtitle
+  translation: "Projects and collaborations"
+
 # Contact Section
 - id: contact
   translation: "Contact"
