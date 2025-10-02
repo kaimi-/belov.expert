@@ -95,11 +95,6 @@ disableKinds:
   - taxonomy
   - term
 
-# Configure content types to disable
-ignoreFiles:
-  - "content/posts/.*"
-  - "content/.*/posts/.*"
-
 # Enable syntax highlighting
 markup:
   highlight:
