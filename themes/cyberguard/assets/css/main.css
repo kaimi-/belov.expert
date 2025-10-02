@@ -742,10 +742,10 @@ hr {
 }
 
 .portfolio-grid {
-    display: flex;
+    display: inline-flex;
     gap: 2rem;
     overflow-x: hidden;
-    width: 100%;
+    width: max-content;
 }
 
 @keyframes scrollPortfolio {
@@ -765,6 +765,8 @@ hr {
     transition: transform var(--transition), box-shadow var(--transition);
     overflow: hidden;
 }
+
+ 
 
 .portfolio-card:hover {
     transform: translateY(-5px);

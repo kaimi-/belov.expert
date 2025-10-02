@@ -204,6 +204,8 @@ function initPortfolioCarousel() {
             // Enable animation with responsive duration
             const animationDuration = window.innerWidth <= 768 ? '20s' : '30s';
             portfolioGrid.style.animation = `scrollPortfolio ${animationDuration} linear infinite`;
+            portfolioGrid.style.width = 'max-content';
+            portfolioGrid.style.display = 'inline-flex';
             
             // Remove any existing duplicates first
             const allCards = portfolioGrid.querySelectorAll('.portfolio-card');
@@ -237,6 +239,8 @@ function initPortfolioCarousel() {
             // Disable animation and center items
             portfolioGrid.style.animation = 'none';
             portfolioGrid.style.justifyContent = 'center';
+            portfolioGrid.style.width = '100%';
+            portfolioGrid.style.display = 'flex';
             
             // Remove duplicates if any
             const allCards = portfolioGrid.querySelectorAll('.portfolio-card');
