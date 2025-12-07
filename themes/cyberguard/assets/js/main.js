@@ -85,6 +85,14 @@ function initMobileMenu() {
                 document.body.classList.remove('menu-open');
             }
         });
+        
+        // Close menu when clicking on navigation links
+        const navLinks = document.querySelectorAll('.main-nav a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                document.body.classList.remove('menu-open');
+            });
+        });
     }
 }
 
