@@ -14,11 +14,3 @@ Disallow: /css/
 Disallow: /fonts/
 Disallow: /images/media-logos/
 Disallow: /images/social/
-
-# Allow Google to access everything
-User-agent: Googlebot
-Allow: /
-
-# Allow Bingbot to access everything  
-User-agent: Bingbot
-Allow: / 
