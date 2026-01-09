@@ -40,37 +40,37 @@
 - id: services
   translation: "Services"
 - id: servicesSubtitle
-  translation: "Comprehensive cybersecurity solutions tailored to enterprise needs"
+  translation: "Hands-on cybersecurity consulting — from strategy and architecture to pentesting and implementation"
 
 - id: strategyTitle
-  translation: "Security Strategy & Advisory"
+  translation: "vCISO Advisory & Security Strategy"
 - id: strategyDesc
-  translation: "Develop comprehensive security roadmaps aligned with business objectives"
+  translation: "Clarify the current state, set priorities, and turn security goals into an execution plan with measurable outcomes"
 
 - id: threatTitle
-  translation: "Threat Intelligence & Vulnerability Management"
+  translation: "Vulnerability Management Process"
 - id: threatDesc
-  translation: "Identify and mitigate potential threats before they impact your business"
+  translation: "Assistance with setting up triage, classification, SLAs, and closure control; consulting on CI/CD integration and team workflows"
 
 - id: secArchTitle
   translation: "Security Architecture Review"
 - id: secArchDesc
-  translation: "Design and validate secure system architectures"
+  translation: "Threat modeling, critical scenarios, hardening and control requirements"
 
 - id: pentestTitle
-  translation: "Penetration Testing"
+  translation: "Pentesting: Web/API/Mobile/Cloud"
 - id: pentestDesc
-  translation: "Identify vulnerabilities through simulated cyber attacks"
+  translation: "Think like an attacker: exploitation, attack chains, actionable fixes and verification of remediation"
 
 - id: complianceTitle
-  translation: "Compliance & Risk Management"
+  translation: "Fraud & Transaction Security Review"
 - id: complianceDesc
-  translation: "Navigate complex regulatory requirements while strengthening security posture"
+  translation: "Audit of critical flows: signup → KYC → auth → payments/payouts. Identify ATO, limit bypass, abuse patterns, payout redirection and antifraud/monitoring gaps"
 
 - id: trainingTitle
-  translation: "Security Training & Awareness"
+  translation: "Practical Team Training"
 - id: trainingDesc
-  translation: "Build a culture of security awareness within your organization"
+  translation: "Workshops: secure coding, real cases, checklists and defensive patterns your teams can apply immediately"
 
 # Publications Section
 - id: publications
