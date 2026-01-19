@@ -6,3 +6,7 @@
   logo: images/projects/alfabit.svg
   url: https://alfabit.org
   description: "Crypto and payment solutions"
+- title: "Tsunami Cash"
+  logo: images/projects/tsunami.svg
+  url: https://www.tsunami.cash
+  description: "Cryptocurrency exchange service"
