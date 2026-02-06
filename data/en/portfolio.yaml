@@ -10,3 +10,7 @@
   logo: images/projects/tsunami.svg
   url: https://www.tsunami.cash
   description: "Cryptocurrency exchange service"
+- title: "Fswap"
+  logo: images/projects/fswap.svg
+  url: https://fswap.io
+  description: "Cryptocurrency exchange service"
