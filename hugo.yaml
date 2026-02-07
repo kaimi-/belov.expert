@@ -37,6 +37,7 @@ params:
   # Contact information
   contact:
     email: "sergey@belov.expert"
+    telegram: "@kaimi_ru"
   # Publications display settings
   publications:
     defaultDisplay: 6  # Number of publications to show initially
