@@ -216,10 +216,12 @@ function initPortfolioCarousel() {
     const originalCards = Array.from(portfolioGrid.querySelectorAll('.portfolio-card'));
     if (originalCards.length === 0) return;
     
+    var styleEl = null;
+
     function removeDuplicates() {
-        const allCards = portfolioGrid.querySelectorAll('.portfolio-card');
-        allCards.forEach((card, index) => {
-            if (index >= originalCards.length) card.remove();
+        var allCards = portfolioGrid.querySelectorAll('.portfolio-card');
+        allCards.forEach(function(card, i) {
+            if (i >= originalCards.length) card.remove();
         });
     }
 
@@ -234,20 +236,30 @@ function initPortfolioCarousel() {
             portfolioGrid.classList.add('is-scrolling');
 
             var containerWidth = portfolioGrid.parentElement.offsetWidth;
-            var cardWidth = 320;
             var gap = parseInt(window.getComputedStyle(portfolioGrid).gap) || 32;
+            var estimatedSetWidth = originalCards.length * (320 + gap);
 
-            var fragment = document.createDocumentFragment();
-            originalCards.forEach(function(card) { fragment.appendChild(card.cloneNode(true)); });
-            portfolioGrid.appendChild(fragment);
-
-            var doubled = (originalCards.length * 2 * cardWidth) + ((originalCards.length * 2 - 1) * gap);
-            if (doubled < containerWidth * 2 && originalCards.length <= 3) {
-                originalCards.forEach(function(card) { portfolioGrid.appendChild(card.cloneNode(true)); });
+            var setsNeeded = Math.ceil((containerWidth + estimatedSetWidth) / estimatedSetWidth) + 1;
+            for (var s = 0; s < setsNeeded; s++) {
+                originalCards.forEach(function(card) {
+                    portfolioGrid.appendChild(card.cloneNode(true));
+                });
             }
 
-            var duration = window.innerWidth <= 768 ? '20s' : '30s';
-            portfolioGrid.style.animation = 'scrollPortfolio ' + duration + ' linear infinite';
+            var oneSetWidth = portfolioGrid.children[originalCards.length].offsetLeft - portfolioGrid.children[0].offsetLeft;
+
+            if (styleEl) styleEl.remove();
+            styleEl = document.createElement('style');
+            styleEl.textContent =
+                '@keyframes scrollPortfolio{' +
+                'from{transform:translate3d(0,0,0)}' +
+                'to{transform:translate3d(-' + oneSetWidth + 'px,0,0)}' +
+                '}';
+            document.head.appendChild(styleEl);
+
+            var speed = 40;
+            var duration = oneSetWidth / speed;
+            portfolioGrid.style.animation = 'scrollPortfolio ' + duration + 's linear infinite';
 
             portfolioGrid.addEventListener('mouseenter', pauseAnimation);
             portfolioGrid.addEventListener('mouseleave', resumeAnimation);

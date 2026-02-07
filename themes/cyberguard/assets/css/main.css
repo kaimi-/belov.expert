@@ -793,19 +793,11 @@ hr {
     width: max-content;
     overflow-x: hidden;
     justify-content: flex-start;
+    will-change: transform;
 }
 
 .portfolio-grid.is-scrolling .portfolio-card {
     flex: 0 0 320px;
-}
-
-@keyframes scrollPortfolio {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(-50%);
-    }
 }
 
 .portfolio-card {
