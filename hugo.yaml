@@ -49,6 +49,21 @@ params:
     telegram: "https://t.me/kaimi_ru"
     instagram: "https://www.instagram.com/kaimi_ru/"
     blog: "https://kaimi.io/"
+  # Certifications
+  certifications:
+    - titleKey: "oscpTitle"
+      badge: "images/badges/oscp.webp"
+      url: "https://credentials.offsec.com/afbc0e6e-1617-462e-8727-2af8fe2e098c"
+    - titleKey: "osweTitle"
+      badge: "images/badges/oswe.webp"
+      url: "https://credentials.offsec.com/be6e60dd-c195-4be8-b410-152c7d1f3023"
+    - titleKey: "cehTitle"
+      badge: "images/badges/ceh.webp"
+    - titleKey: "ecsaTitle"
+      badge: "images/badges/ecsa.webp"
+    - titleKey: "burpTitle"
+      badge: "images/badges/burp.webp"
+      url: "https://portswigger.net/web-security/e/c/efea53d0245f4c55"
   # Calendly link
   calendly: "https://calendly.com/sergey-belov/30min"
 

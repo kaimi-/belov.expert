@@ -757,6 +757,11 @@ hr {
     box-shadow: var(--shadow-md);
 }
 
+.certification-card a {
+    color: inherit;
+    text-decoration: none;
+}
+
 .certification-image {
     margin-bottom: 1rem;
     display: flex;

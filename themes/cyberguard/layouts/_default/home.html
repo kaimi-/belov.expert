@@ -85,40 +85,16 @@
         </div>
         
         <div class="certifications-grid">
+            {{ range .Site.Params.certifications }}
             <div class="certification-card animate-on-scroll">
+                {{ if .url }}<a href="{{ .url }}" target="_blank" rel="noopener noreferrer">{{ end }}
                 <div class="certification-image">
-                    <img src="{{ "images/badges/oscp.webp" | relURL }}" alt="{{ i18n "oscpTitle" }}" width="180" height="180">
+                    <img src="{{ .badge | relURL }}" alt="{{ i18n .titleKey }}" width="180" height="180">
                 </div>
-                <h3 class="certification-title">{{ i18n "oscpTitle" }}</h3>
+                <h3 class="certification-title">{{ i18n .titleKey }}</h3>
+                {{ if .url }}</a>{{ end }}
             </div>
-            
-            <div class="certification-card animate-on-scroll">
-                <div class="certification-image">
-                    <img src="{{ "images/badges/oswe.webp" | relURL }}" alt="{{ i18n "osweTitle" }}" width="180" height="180">
-                </div>
-                <h3 class="certification-title">{{ i18n "osweTitle" }}</h3>
-            </div>
-            
-            <div class="certification-card animate-on-scroll">
-                <div class="certification-image">
-                    <img src="{{ "images/badges/ceh.webp" | relURL }}" alt="{{ i18n "cehTitle" }}" width="180" height="180">
-                </div>
-                <h3 class="certification-title">{{ i18n "cehTitle" }}</h3>
-            </div>
-            
-            <div class="certification-card animate-on-scroll">
-                <div class="certification-image">
-                    <img src="{{ "images/badges/ecsa.webp" | relURL }}" alt="{{ i18n "ecsaTitle" }}" width="180" height="180">
-                </div>
-                <h3 class="certification-title">{{ i18n "ecsaTitle" }}</h3>
-            </div>
-            
-            <div class="certification-card animate-on-scroll">
-                <div class="certification-image">
-                    <img src="{{ "images/badges/burp.webp" | relURL }}" alt="{{ i18n "burpTitle" }}" width="180" height="180">
-                </div>
-                <h3 class="certification-title">{{ i18n "burpTitle" }}</h3>
-            </div>
+            {{ end }}
         </div>
     </div>
 </section>
