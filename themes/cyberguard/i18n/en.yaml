@@ -40,37 +40,37 @@
 - id: services
   translation: "Services"
 - id: servicesSubtitle
-  translation: "Hands-on cybersecurity consulting — from strategy and architecture to pentesting and implementation"
+  translation: "Independent cybersecurity consulting for fintech, exchange services, and online products"
 
 - id: strategyTitle
-  translation: "vCISO Advisory & Security Strategy"
+  translation: "Security Strategy & Advisory"
 - id: strategyDesc
-  translation: "Clarify the current state, set priorities, and turn security goals into an execution plan with measurable outcomes"
+  translation: "Assess risks, set priorities, and build a practical security roadmap aligned with business goals"
 
-- id: threatTitle
-  translation: "Vulnerability Management Process"
-- id: threatDesc
-  translation: "Assistance with setting up triage, classification, SLAs, and closure control; consulting on CI/CD integration and team workflows"
+- id: bestchangeTitle
+  translation: "BestChange Security Audit"
+- id: bestchangeDesc
+  translation: "Review your service against BestChange requirements, identify gaps, and prepare clear remediation actions"
 
 - id: secArchTitle
   translation: "Security Architecture Review"
 - id: secArchDesc
-  translation: "Threat modeling, critical scenarios, hardening and control requirements"
+  translation: "Analyze critical components, trust boundaries, and key scenarios to uncover design risks early"
 
 - id: pentestTitle
-  translation: "Pentesting: Web/API/Mobile/Cloud"
+  translation: "Pentesting: Web / API / Mobile / Cloud"
 - id: pentestDesc
-  translation: "Think like an attacker: exploitation, attack chains, actionable fixes and verification of remediation"
+  translation: "Simulate real attacks, uncover exploitable weaknesses and attack chains, and provide practical fixes"
 
 - id: complianceTitle
   translation: "Fraud & Transaction Security Review"
 - id: complianceDesc
-  translation: "Audit of critical flows: signup → KYC → auth → payments/payouts. Identify ATO, limit bypass, abuse patterns, payout redirection and antifraud/monitoring gaps"
+  translation: "Review signup, KYC, authentication, payments, and payouts for account takeover, abuse, limit bypass, and weak monitoring"
 
 - id: trainingTitle
-  translation: "Practical Team Training"
+  translation: "Practical Security Training"
 - id: trainingDesc
-  translation: "Workshops: secure coding, real cases, checklists and defensive patterns your teams can apply immediately"
+  translation: "Hands-on sessions for product and engineering teams: common flaws, secure development, and defensive patterns"
 
 # Publications Section
 - id: publications
