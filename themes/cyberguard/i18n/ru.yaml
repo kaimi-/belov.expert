@@ -21,8 +21,6 @@
   translation: "Услуги"
 - id: publications
   translation: "Публикации"
-- id: media
-  translation: "СМИ"
 - id: contact
   translation: "Контакты"
 

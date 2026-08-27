@@ -131,9 +131,9 @@ menu:
       name: "Portfolio"
       url: "/#portfolio"
       weight: 3
-    - identifier: "media"
-      name: "Media"
-      url: "/media/"
+    - identifier: "publications"
+      name: "Publications"
+      url: "/#publications"
       weight: 4
     - identifier: "contact"
       name: "Contact"

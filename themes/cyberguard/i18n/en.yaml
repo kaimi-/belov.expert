@@ -21,8 +21,6 @@
   translation: "Services"
 - id: publications
   translation: "Publications"
-- id: media
-  translation: "Media"
 - id: contact
   translation: "Contact"
 
