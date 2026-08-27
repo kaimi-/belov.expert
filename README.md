@@ -1,6 +1,6 @@
 # belov.expert
 
-Personal landing page built with Hugo.
+Bilingual personal landing page built with Hugo. English is served at `/`, Russian at `/ru/`.
 
 ## Local run
 
@@ -38,9 +38,10 @@ hugo --minify
 
 ## What to edit
 
-- `hugo.yaml`: site config, links, contact, analytics, menu.
+- `hugo.yaml`: site config, links, contact, analytics, menu, identity used in structured data.
 - `data/en/publications.yaml`, `data/ru/publications.yaml`: publications list.
 - `data/en/portfolio.yaml`, `data/ru/portfolio.yaml`: portfolio cards.
+- `content/media.md`, `content/media.ru.md`: the `/media/` page (front matter only; the list is rendered from the publications data).
 - `themes/cyberguard/i18n/en.yaml`, `themes/cyberguard/i18n/ru.yaml`: UI text.
 - `themes/cyberguard/layouts/` and `themes/cyberguard/assets/`: templates, CSS, JS.
 - `static/images/`: images and logos.
@@ -50,6 +51,7 @@ hugo --minify
 ```text
 .
 ├── .github/workflows/hugo.yml
+├── content/
 ├── data/
 ├── layouts/
 ├── static/
