@@ -16,6 +16,7 @@
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="icon" href="/favicon.ico" sizes="any">
     <link rel="manifest" href="/site.webmanifest">
     
     <!-- Theme initialization (before paint) -->
@@ -30,21 +31,29 @@
     <!-- Preload critical assets -->
     <link rel="preload" href="/fonts/inter-var.woff2" as="font" type="font/woff2" crossorigin>
     
+    {{ $shareImage := index .Site.Params.person.images 0 }}
+    {{ $shareImageAlt := printf "%s — %s" (i18n "name") (i18n "cybersecurityExpert") }}
+
     <!-- Open Graph / Social Media Meta Tags -->
     {{ if .Site.Params.seo.enableOpenGraph }}
     <meta property="og:title" content="{{ $pageTitle }}">
     <meta property="og:description" content="{{ with .Description }}{{ . }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}">
     <meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}">
     <meta property="og:url" content="{{ .Permalink }}">
-    <meta property="og:image" content="{{ .Site.BaseURL }}images/og-image.jpg">
+    <meta property="og:image" content="{{ $shareImage.path | absURL }}">
+    <meta property="og:image:type" content="image/webp">
+    <meta property="og:image:width" content="{{ $shareImage.width }}">
+    <meta property="og:image:height" content="{{ $shareImage.height }}">
+    <meta property="og:image:alt" content="{{ $shareImageAlt }}">
     {{ end }}
-    
+
     <!-- Twitter Card -->
     {{ if .Site.Params.seo.enableTwitterCards }}
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="{{ $pageTitle }}">
     <meta name="twitter:description" content="{{ with .Description }}{{ . }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}">
-    <meta name="twitter:image" content="{{ .Site.BaseURL }}images/twitter-card.jpg">
+    <meta name="twitter:image" content="{{ $shareImage.path | absURL }}">
+    <meta name="twitter:image:alt" content="{{ $shareImageAlt }}">
     {{ end }}
     
     <!-- Schema.org for Google -->
