@@ -21,14 +21,18 @@
   translation: "Services"
 - id: publications
   translation: "Publications"
+- id: media
+  translation: "Media"
 - id: contact
   translation: "Contact"
 
 # Hero Section
 - id: heroTitle
-  translation: "Securing Business Against Advanced Threats"
+  translation: "Sergey Belov — Cybersecurity Expert"
 - id: heroSubtitle
-  translation: "Expert cybersecurity consulting services for enterprise organizations looking to protect their critical assets, minimize risks, and ensure regulatory compliance."
+  translation: "Head of Banking Systems Security Research Department at Positive Technologies. Since 2023 I have researched the security of banking systems — from payment flows and anti-fraud to mobile applications and core banking platforms. Before that, over a decade of hands-on security work: penetration testing, reverse engineering, and building SSDLC practices and security teams across fintech and Big4."
+- id: jobTitle
+  translation: "Head of Banking Systems Security Research Department"
 - id: learnMore
   translation: "Learn More"
 - id: bookMeeting
@@ -39,6 +43,8 @@
 # Services Section
 - id: services
   translation: "Services"
+- id: servicesTitle
+  translation: "Securing Business Against Advanced Threats"
 - id: servicesSubtitle
   translation: "Independent cybersecurity consulting for fintech, exchange services, and online products"
 
@@ -79,10 +85,18 @@
   translation: "Recent articles, interviews, and insights on cybersecurity trends"
 - id: viewAllPublications
   translation: "View All Publications"
-- id: hidePublications
-  translation: "Hide Publications"
 - id: readArticle
   translation: "Read Article"
+
+# Media Page
+- id: mediaIntro
+  translation: "I regularly comment on banking fraud, data breaches, payment security, and digital risk for RBC, RIA Novosti, Kommersant, Izvestia, Forbes, and TAdviser. Below is a selection of coverage, not a complete list of media appearances."
+- id: mediaStatPublications
+  translation: "Publications"
+- id: mediaStatOutlets
+  translation: "Outlets"
+- id: mediaStatSince
+  translation: "First publication"
 
 # Certifications Section
 - id: certifications

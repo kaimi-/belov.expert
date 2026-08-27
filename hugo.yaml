@@ -24,16 +24,53 @@ languages:
     weight: 1
     title: "Sergey Belov | Cybersecurity Expert"
     params:
-      description: "Professional cybersecurity services for enterprise companies by Sergey Belov"
+      description: "Sergey Belov — cybersecurity expert, Head of Banking Systems Security Research Department at Positive Technologies. Banking security research, penetration testing, application security."
+      knowsAbout:
+        - "Cybersecurity"
+        - "Banking systems security"
+        - "Application security"
+        - "Penetration testing"
+        - "Payment security"
+        - "Anti-fraud"
+        - "Reverse engineering"
+        - "Secure software development lifecycle"
   ru:
     languageName: "Русский"
     weight: 2
     title: "Сергей Белов | Эксперт по кибербезопасности"
     params:
-      description: "Профессиональные услуги по кибербезопасности для корпоративных клиентов от Сергея Белова"
+      description: "Сергей Белов — эксперт по кибербезопасности, руководитель отдела исследований безопасности банковских систем в Positive Technologies. Пентест, безопасность приложений, антифрод."
+      knowsAbout:
+        - "Кибербезопасность"
+        - "Безопасность банковских систем"
+        - "Безопасность приложений"
+        - "Тестирование на проникновение"
+        - "Безопасность платёжных систем"
+        - "Антифрод"
+        - "Реверс-инжиниринг"
+        - "Безопасная разработка"
 
 params:
   author: "Sergey Belov"
+  # Identity used to build the Person entity in structured data
+  person:
+    names:
+      en: "Sergey Belov"
+      ru: "Сергей Белов"
+    handles:
+      - "Kaimi"
+      - "kaimi_ru"
+      - "kaimi_io"
+    images:
+      - path: "images/sebelovl.webp"
+        width: 1731
+        height: 909
+      - path: "images/sebelov.webp"
+        width: 1122
+        height: 1402
+    employer:
+      name: "Positive Technologies"
+      url: "https://www.ptsecurity.com/"
   # Contact information
   contact:
     email: "sergey@belov.expert"
@@ -49,6 +86,9 @@ params:
     telegram: "https://t.me/kaimi_ru"
     instagram: "https://www.instagram.com/kaimi_ru/"
     blog: "https://kaimi.io/"
+    habr: "https://habr.com/ru/users/kaimi_ru/"
+    ctftime: "https://ctftime.org/user/14667"
+    hackerone: "https://hackerone.com/kaimi"
   # Certifications
   certifications:
     - titleKey: "oscpTitle"
@@ -91,9 +131,9 @@ menu:
       name: "Portfolio"
       url: "/#portfolio"
       weight: 3
-    - identifier: "publications"
-      name: "Publications"
-      url: "/#publications"
+    - identifier: "media"
+      name: "Media"
+      url: "/media/"
       weight: 4
     - identifier: "contact"
       name: "Contact"

@@ -1,0 +1,101 @@
+{{- $person := .Site.Params.person -}}
+{{- $social := .Site.Params.social -}}
+{{- $lang := .Site.Language.Lang -}}
+{{- $base := .Site.BaseURL -}}
+
+{{- $personID := printf "%s#person" $base -}}
+{{- $employerID := printf "%s#employer" $base -}}
+{{- $websiteID := printf "%s#website" .Site.Home.Permalink -}}
+{{- $pageID := printf "%s#webpage" .Permalink -}}
+
+{{- $alternateNames := $person.handles -}}
+{{- range $code, $name := $person.names -}}
+    {{- if ne $code $lang -}}{{- $alternateNames = $alternateNames | append $name -}}{{- end -}}
+{{- end -}}
+
+{{- $images := slice -}}
+{{- range $person.images -}}
+    {{- $images = $images | append (dict
+        "@type" "ImageObject"
+        "url" (absURL .path)
+        "width" .width
+        "height" .height) -}}
+{{- end -}}
+
+{{- $personNode := dict
+    "@type" "Person"
+    "@id" $personID
+    "name" (index $person.names $lang)
+    "alternateName" $alternateNames
+    "url" $base
+    "image" $images
+    "jobTitle" (i18n "jobTitle")
+    "worksFor" (dict "@id" $employerID)
+    "knowsAbout" .Site.Params.knowsAbout
+    "email" .Site.Params.contact.email
+    "sameAs" (slice
+        $social.linkedin
+        $social.twitter
+        $social.github
+        $social.telegram
+        $social.blog
+        $social.habr
+        $social.ctftime
+        $social.hackerone) -}}
+
+{{- $employerNode := dict
+    "@type" "Organization"
+    "@id" $employerID
+    "name" $person.employer.name
+    "url" $person.employer.url -}}
+
+{{- $websiteNode := dict
+    "@type" "WebSite"
+    "@id" $websiteID
+    "url" .Site.Home.Permalink
+    "name" .Site.Title
+    "inLanguage" $lang
+    "publisher" (dict "@id" $personID) -}}
+
+{{- $pageNode := dict
+    "@id" $pageID
+    "url" .Permalink
+    "name" (cond .IsHome .Site.Title .Title)
+    "description" (or .Description .Site.Params.description)
+    "inLanguage" $lang
+    "isPartOf" (dict "@id" $websiteID) -}}
+
+{{- if .IsHome -}}
+    {{- $pageNode = merge $pageNode (dict "@type" "ProfilePage" "mainEntity" (dict "@id" $personID)) -}}
+{{- else if .Params.schemaPublications -}}
+    {{- $listItems := slice -}}
+    {{- range $index, $publication := index .Site.Data $lang "publications" -}}
+        {{- $article := dict
+            "@type" "NewsArticle"
+            "url" $publication.url
+            "headline" $publication.title
+            "publisher" (dict "@type" "Organization" "name" (partial "outlet-name.html" $publication.media_name)) -}}
+        {{- with partial "publication-date-iso.html" $publication.date -}}
+            {{- $article = merge $article (dict "datePublished" .) -}}
+        {{- end -}}
+        {{- $listItems = $listItems | append (dict
+            "@type" "ListItem"
+            "position" (add $index 1)
+            "url" $publication.url
+            "item" $article) -}}
+    {{- end -}}
+    {{- $pageNode = merge $pageNode (dict
+        "@type" "CollectionPage"
+        "about" (dict "@id" $personID)
+        "mainEntity" (dict
+            "@type" "ItemList"
+            "numberOfItems" (len $listItems)
+            "itemListOrder" "https://schema.org/ItemListOrderDescending"
+            "itemListElement" $listItems)) -}}
+{{- else -}}
+    {{- $pageNode = merge $pageNode (dict "@type" "WebPage" "about" (dict "@id" $personID)) -}}
+{{- end -}}
+
+<script type="application/ld+json">
+{{- dict "@context" "https://schema.org" "@graph" (slice $personNode $employerNode $websiteNode $pageNode) | jsonify | safeJS -}}
+</script>

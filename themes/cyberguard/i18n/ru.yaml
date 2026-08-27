@@ -21,14 +21,18 @@
   translation: "Услуги"
 - id: publications
   translation: "Публикации"
+- id: media
+  translation: "СМИ"
 - id: contact
   translation: "Контакты"
 
 # Hero Section
 - id: heroTitle
-  translation: "Защита бизнеса от продвинутых угроз"
+  translation: "Сергей Белов — эксперт по кибербезопасности"
 - id: heroSubtitle
-  translation: "Услуги в области кибербезопасности для компаний, стремящихся защитить свои активы, минимизировать риски и обеспечить соответствие нормативным требованиям."
+  translation: "Руководитель отдела исследований безопасности банковских систем в Positive Technologies. С 2023 года исследую защищённость банковских систем — от платёжных сценариев и антифрода до мобильных приложений и АБС. До этого более десяти лет практической ИБ: пентесты, реверс-инжиниринг, построение SSDLC и команд безопасности в финтехе и Big4."
+- id: jobTitle
+  translation: "Руководитель отдела исследований безопасности банковских систем"
 - id: learnMore
   translation: "Подробнее"
 - id: bookMeeting
@@ -40,6 +44,8 @@
 # Services Section
 - id: services
   translation: "Услуги"
+- id: servicesTitle
+  translation: "Защита бизнеса от продвинутых угроз"
 - id: servicesSubtitle
   translation: "Независимый консалтинг по ИБ для финтеха, обменных сервисов и онлайн-продуктов"
 
@@ -81,10 +87,18 @@
   translation: "Недавние статьи, интервью и аналитика о тенденциях кибербезопасности"
 - id: viewAllPublications
   translation: "Просмотреть все публикации"
-- id: hidePublications
-  translation: "Скрыть публикации"
 - id: readArticle
   translation: "Читать статью"
+
+# Media Page
+- id: mediaIntro
+  translation: "Регулярно комментирую банковское мошенничество, утечки данных, безопасность платежей и цифровые риски для РБК, РИА Новости, Коммерсанта, Известий, Forbes и TAdviser. Ниже — подборка материалов, это не полный список выступлений в СМИ."
+- id: mediaStatPublications
+  translation: "Публикации"
+- id: mediaStatOutlets
+  translation: "Издания"
+- id: mediaStatSince
+  translation: "Первая публикация"
 
 # Certifications Section
 - id: certifications

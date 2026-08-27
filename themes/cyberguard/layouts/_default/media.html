@@ -1,0 +1,44 @@
+{{ define "main" }}
+{{ $publications := index .Site.Data .Site.Language.Lang "publications" }}
+{{ $outlets := slice }}
+{{ $years := slice }}
+{{ range $publications }}
+{{ $outlets = $outlets | append (lower (partial "outlet-name.html" .media_name)) }}
+{{ with partial "publication-date-iso.html" .date }}{{ $years = $years | append (index (split . "-") 0) }}{{ end }}
+{{ end }}
+
+<section class="page-header">
+    <div class="hero-background"></div>
+    <div class="container">
+        <h1>{{ .Title }}</h1>
+        <p class="page-lead">{{ i18n "mediaIntro" }}</p>
+
+        <dl class="media-stats">
+            <div class="media-stat">
+                <dt>{{ i18n "mediaStatPublications" }}</dt>
+                <dd>{{ len $publications }}</dd>
+            </div>
+            <div class="media-stat">
+                <dt>{{ i18n "mediaStatOutlets" }}</dt>
+                <dd>{{ len (uniq $outlets) }}</dd>
+            </div>
+            {{ with $years }}
+            <div class="media-stat">
+                <dt>{{ i18n "mediaStatSince" }}</dt>
+                <dd>{{ index (sort .) 0 }}</dd>
+            </div>
+            {{ end }}
+        </dl>
+    </div>
+</section>
+
+<section class="section publications-section">
+    <div class="container">
+        <div class="publications-grid">
+            {{ range $publications }}
+            {{ partial "publication-card.html" . }}
+            {{ end }}
+        </div>
+    </div>
+</section>
+{{ end }}

@@ -12,7 +12,7 @@
                 </div>
             </div>
             <div class="hero-image animate-on-scroll">
-                <img src="{{ "images/hero-image.webp" | relURL }}" alt="{{ i18n "cybersecurityExpert" }}" fetchpriority="high" width="600" height="450">
+                <img src="{{ "images/sebelovl.webp" | relURL }}" alt="{{ i18n "name" }} — {{ i18n "cybersecurityExpert" }}" fetchpriority="high" width="600" height="400">
             </div>
         </div>
     </div>
@@ -21,7 +21,7 @@
 <section id="services" class="section services-section">
     <div class="container">
         <div class="section-title">
-            <h2>{{ i18n "services" }}</h2>
+            <h2>{{ i18n "servicesTitle" }}</h2>
             <p>{{ i18n "servicesSubtitle" }}</p>
         </div>
         
@@ -136,36 +136,14 @@
             <div class="publications-grid">
                 {{ $publications := index .Site.Data .Site.Language.Lang "publications" }}
                 {{ $defaultDisplay := default 6 .Site.Params.publications.defaultDisplay }}
-                {{ $totalCount := len $publications }}
-                {{ range $index, $publication := $publications }}
-                {{ $showByDefault := lt $index $defaultDisplay }}
-                <div class="publication-card{{ if not $showByDefault }} hidden-publication{{ end }}">
-                    <div class="publication-content">
-                        <div class="publication-media">
-                            <img src="{{ .media_logo | relURL }}" alt="{{ .media_name }}" class="publication-logo" width="48" height="48">
-                            <div class="publication-source">{{ .media_name }}</div>
-                        </div>
-                        <h3 class="publication-title">
-                            <a href="{{ .url }}" target="_blank" rel="noopener">{{ .title }}</a>
-                        </h3>
-                        {{ if .date }}
-                        <div class="publication-date">{{ .date }}</div>
-                        {{ end }}
-                        <a href="{{ .url }}" class="publication-link" target="_blank" rel="noopener">
-                            {{ i18n "readArticle" }}
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-                        </a>
-                    </div>
-                </div>
+                {{ range first $defaultDisplay $publications }}
+                {{ partial "publication-card.html" . }}
                 {{ end }}
             </div>
-            
-            {{ if gt (len $publications) $defaultDisplay }}
+
+            {{ with .Site.GetPage "/media" }}
             <div class="view-all-publications">
-                <a href="#" class="btn btn-outline view-toggle" 
-                   data-showing-all="false"
-                   data-view-all-text="{{ i18n "viewAllPublications" }}"
-                   data-hide-text="{{ i18n "hidePublications" }}">{{ i18n "viewAllPublications" }}</a>
+                <a href="{{ .RelPermalink }}" class="btn btn-outline">{{ i18n "viewAllPublications" }}</a>
             </div>
             {{ end }}
         </div>

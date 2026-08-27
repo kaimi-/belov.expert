@@ -1,10 +1,12 @@
 # Sergey Belov (Sergey “Kaimi” Belov)
 
-> Cybersecurity expert and team lead focused on application security, penetration testing, and security architecture for enterprise systems.
+> Cybersecurity expert, Head of Banking Systems Security Research Department at Positive Technologies, focused on banking systems security, application security, penetration testing, and security architecture for enterprise systems.
 
 I’m Sergey “Kaimi” Belov. I spend most of my time helping companies understand how they can actually be hacked - and then making sure it’s me who does it first.
 
 ## Professional Background
+
+Since 2023 I lead the Banking Systems Security Research Department at Positive Technologies, where my team researches the security of banking systems — payment flows, anti-fraud, mobile applications, and core banking platforms.
 
 My background is a mix of low-level development and offensive security. Over the last decade, I’ve led and built security teams across banking, fintech, AI platforms, and Big4 consulting, spanning classic penetration testing and reverse engineering through SSDLC, threat modeling, and large-scale vulnerability assessments. I’ve worked across environments from ATMs and payment systems to cloud infrastructure and developer tooling, and I still enjoy getting my hands dirty with Burp, IDA, nmap, and a good hex editor.
 
@@ -59,6 +61,9 @@ My main public sites are available in English and Russian.
 - X/Twitter: https://twitter.com/kaimi_io
 - LinkedIn: https://linkedin.com/in/bserg
 - Instagram: https://www.instagram.com/kaimi_ru/
+- Habr: https://habr.com/ru/users/kaimi_ru/
+- CTFtime: https://ctftime.org/user/14667
+- HackerOne: https://hackerone.com/kaimi
 
 ## File Listings (Authoritative Sources)
 
@@ -72,7 +77,8 @@ My main public sites are available in English and Russian.
 - https://belov.expert (Portfolio section)
 
 ### Publications
-- https://belov.expert (Publications section)
+- https://belov.expert/media/
+- https://belov.expert/ru/media/
 
 #### Publications list
 - How to tell if your phone calls are being tapped - Rambler - 12-16-2025 - https://life.rambler.ru/instructions/55767313-kak-opredelit-chto-telefonnye-zvonki-proslushivayut/

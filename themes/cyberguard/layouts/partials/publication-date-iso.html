@@ -1,0 +1,14 @@
+{{- $raw := default "" . -}}
+{{- $iso := "" -}}
+{{- if strings.Contains $raw "." -}}
+    {{- $parts := split $raw "." -}}
+    {{- if eq (len $parts) 3 -}}
+        {{- $iso = printf "%s-%s-%s" (index $parts 2) (index $parts 1) (index $parts 0) -}}
+    {{- end -}}
+{{- else if strings.Contains $raw "-" -}}
+    {{- $parts := split $raw "-" -}}
+    {{- if eq (len $parts) 3 -}}
+        {{- $iso = printf "%s-%s-%s" (index $parts 2) (index $parts 0) (index $parts 1) -}}
+    {{- end -}}
+{{- end -}}
+{{- return $iso -}}

@@ -13,44 +13,6 @@ document.addEventListener('DOMContentLoaded', function() {
     // Smooth scrolling for anchor links
     initSmoothScroll();
     
-    // Publications toggle
-    const viewToggle = document.querySelector('.view-toggle');
-    if (viewToggle) {
-        viewToggle.addEventListener('click', function(e) {
-            e.preventDefault();
-            const isShowingAll = this.getAttribute('data-showing-all') === 'true';
-            const hiddenPublications = document.querySelectorAll('.hidden-publication');
-            
-            if (isShowingAll) {
-                // Hide publications
-                hiddenPublications.forEach(pub => {
-                    pub.style.display = 'none';
-                });
-                this.setAttribute('data-showing-all', 'false');
-                // Use the original text that was set by Hugo template
-                // which already has the correct i18n translation
-                const viewAllText = this.getAttribute('data-view-all-text');
-                if (viewAllText) {
-                    this.textContent = viewAllText;
-                }
-                
-                // Scroll to publications section
-                document.getElementById('publications').scrollIntoView({ behavior: 'smooth' });
-            } else {
-                // Show all publications
-                hiddenPublications.forEach(pub => {
-                    pub.style.display = 'block';
-                });
-                this.setAttribute('data-showing-all', 'true');
-                // Use the hide text that was set by Hugo template
-                const hideText = this.getAttribute('data-hide-text');
-                if (hideText) {
-                    this.textContent = hideText;
-                }
-            }
-        });
-    }
-    
     // Initialize animations
     initAnimations();
     
