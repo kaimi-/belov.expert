@@ -33,6 +33,8 @@
   translation: "Head of Banking Systems Security Research Department at Positive Technologies. Since 2023 I have researched the security of banking systems — from payment flows and anti-fraud to mobile applications and core banking platforms. Before that, over a decade of hands-on security work: penetration testing, reverse engineering, and building SSDLC practices and security teams across fintech and Big4."
 - id: jobTitle
   translation: "Head of Banking Systems Security Research Department"
+- id: personDescription
+  translation: "Sergey Belov is a cybersecurity expert and Head of Banking Systems Security Research Department at Positive Technologies. Specializes in banking and payment systems security, penetration testing, application security, and anti-fraud. Over a decade of hands-on experience across fintech and Big4, with regular commentary on digital risk and financial fraud for Russian and international media."
 - id: learnMore
   translation: "Learn More"
 - id: bookMeeting

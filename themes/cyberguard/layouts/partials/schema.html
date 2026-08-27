@@ -27,6 +27,7 @@
     "@id" $personID
     "name" (index $person.names $lang)
     "alternateName" $alternateNames
+    "description" (i18n "personDescription")
     "url" $base
     "image" $images
     "jobTitle" (i18n "jobTitle")
@@ -74,14 +75,14 @@
             "@type" "NewsArticle"
             "url" $publication.url
             "headline" $publication.title
-            "publisher" (dict "@type" "Organization" "name" (partial "outlet-name.html" $publication.media_name)) -}}
+            "publisher" (dict "@type" "Organization" "name" (partial "outlet-name.html" $publication.media_name))
+            "mentions" (dict "@id" $personID) -}}
         {{- with partial "publication-date-iso.html" $publication.date -}}
             {{- $article = merge $article (dict "datePublished" .) -}}
         {{- end -}}
         {{- $listItems = $listItems | append (dict
             "@type" "ListItem"
             "position" (add $index 1)
-            "url" $publication.url
             "item" $article) -}}
     {{- end -}}
     {{- $pageNode = merge $pageNode (dict
