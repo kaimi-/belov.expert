@@ -153,7 +153,7 @@
 - id: bestchangeProcessTitle
   translation: "How the Audit Works"
 - id: bestchangeProcessSubtitle
-  translation: "Four steps from agreeing the scope to confirming remediation"
+  translation: "Five steps from agreeing the scope to confirming remediation"
 
 - id: bestchangeStep1Title
   translation: "Scope and Access"
@@ -161,18 +161,23 @@
   translation: "We agree on the boundaries, the environment, and the rules of engagement. For grey-box coverage you provide test accounts and a scope estimate: the number of REST API endpoints, the number of roles to test, and a general description of what the service does."
 
 - id: bestchangeStep2Title
-  translation: "Testing"
+  translation: "Auditor Approval"
 - id: bestchangeStep2Desc
-  translation: "I audit the security of the service using {{ .blackBox }} testing. I report critical findings as soon as I find them."
+  translation: "You tell BestChange that I will be your auditor and receive their confirmation."
 
 - id: bestchangeStep3Title
-  translation: "Report"
+  translation: "Testing"
 - id: bestchangeStep3Desc
-  translation: "You receive a report describing every finding with reproduction steps, a risk rating, and specific guidance on how to fix it."
+  translation: "I audit the security of the service using {{ .blackBox }} testing. I report critical findings as soon as I find them."
 
 - id: bestchangeStep4Title
-  translation: "Retest"
+  translation: "Report"
 - id: bestchangeStep4Desc
+  translation: "You receive a report describing every finding with reproduction steps, a risk rating, and specific guidance on how to fix it."
+
+- id: bestchangeStep5Title
+  translation: "Retest"
+- id: bestchangeStep5Desc
   translation: "Once the fixes are in place I re-verify the affected areas and record the result, so the final document confirms the issues are closed."
 
 - id: bestchangeDeliverablesTitle

@@ -155,7 +155,7 @@
 - id: bestchangeProcessTitle
   translation: "Как проходит аудит"
 - id: bestchangeProcessSubtitle
-  translation: "Четыре шага от согласования границ до подтверждения устранения"
+  translation: "Пять шагов от согласования границ до подтверждения устранения"
 
 - id: bestchangeStep1Title
   translation: "Скоуп и доступы"
@@ -163,18 +163,23 @@
   translation: "Согласуем границы проверки, окружение и правила тестирования. Для серого ящика вы готовите тестовые учётные записи и оценку объёма: число REST API эндпоинтов, количество тестируемых ролей и общее описание функциональности сервиса."
 
 - id: bestchangeStep2Title
-  translation: "Тестирование"
+  translation: "Подтверждение аудитора"
 - id: bestchangeStep2Desc
-  translation: "Провожу аудит безопасности сервиса методом {{ .blackBox }}. О критичных находках сообщаю сразу, по факту обнаружения."
+  translation: "Вы сообщаете BestChange, что аудит буду проводить я, и получаете от них подтверждение."
 
 - id: bestchangeStep3Title
-  translation: "Отчёт"
+  translation: "Тестирование"
 - id: bestchangeStep3Desc
-  translation: "Вы получаете отчёт с описанием каждой находки, шагами воспроизведения, оценкой риска и конкретными рекомендациями по устранению."
+  translation: "Провожу аудит безопасности сервиса методом {{ .blackBox }}. О критичных находках сообщаю сразу, по факту обнаружения."
 
 - id: bestchangeStep4Title
-  translation: "Ретест"
+  translation: "Отчёт"
 - id: bestchangeStep4Desc
+  translation: "Вы получаете отчёт с описанием каждой находки, шагами воспроизведения, оценкой риска и конкретными рекомендациями по устранению."
+
+- id: bestchangeStep5Title
+  translation: "Ретест"
+- id: bestchangeStep5Desc
   translation: "После доработок повторно проверяю исправленные места и фиксирую результат, чтобы итоговый документ подтверждал закрытие проблем."
 
 - id: bestchangeDeliverablesTitle
