@@ -217,7 +217,7 @@
 - id: bestchangeDeliverableRetest
   translation: "A retest of the fixes and a final document confirming that the issues are closed"
 - id: bestchangeDeliverableSupport
-  translation: "Answers for your development team while the fixes are in progress"
+  translation: "Answers for your development team on the recommendations and how to implement them"
 
 - id: bestchangeProofTitle
   translation: "Track Record"

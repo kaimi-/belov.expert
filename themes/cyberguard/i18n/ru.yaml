@@ -219,7 +219,7 @@
 - id: bestchangeDeliverableRetest
   translation: "Повторную проверку устранения и итоговый документ с подтверждением, что проблемы закрыты"
 - id: bestchangeDeliverableSupport
-  translation: "Ответы на вопросы вашей команды разработки в процессе исправления"
+  translation: "Ответы на вопросы команды разработки по рекомендациям и их реализации"
 
 - id: bestchangeProofTitle
   translation: "Опыт прохождения требования"
