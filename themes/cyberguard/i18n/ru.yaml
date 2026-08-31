@@ -157,26 +157,36 @@
 - id: bestchangeProcessSubtitle
   translation: "Пять шагов от согласования границ до подтверждения устранения"
 
+- id: bestchangeStep1Owner
+  translation: "Вместе"
 - id: bestchangeStep1Title
   translation: "Скоуп и доступы"
 - id: bestchangeStep1Desc
   translation: "Согласуем границы проверки, окружение и правила тестирования. Для серого ящика вы готовите тестовые учётные записи и оценку объёма: число REST API эндпоинтов, количество тестируемых ролей и общее описание функциональности сервиса."
 
+- id: bestchangeStep2Owner
+  translation: "На вас"
 - id: bestchangeStep2Title
   translation: "Подтверждение аудитора"
 - id: bestchangeStep2Desc
   translation: "Вы сообщаете BestChange, что аудит буду проводить я, и получаете от них подтверждение."
 
+- id: bestchangeStep3Owner
+  translation: "На мне"
 - id: bestchangeStep3Title
   translation: "Тестирование"
 - id: bestchangeStep3Desc
   translation: "Провожу аудит безопасности сервиса методом {{ .blackBox }}. О критичных находках сообщаю сразу, по факту обнаружения."
 
+- id: bestchangeStep4Owner
+  translation: "На мне"
 - id: bestchangeStep4Title
   translation: "Отчёт"
 - id: bestchangeStep4Desc
   translation: "Вы получаете отчёт с описанием каждой находки, шагами воспроизведения, оценкой риска и конкретными рекомендациями по устранению."
 
+- id: bestchangeStep5Owner
+  translation: "На мне"
 - id: bestchangeStep5Title
   translation: "Ретест"
 - id: bestchangeStep5Desc

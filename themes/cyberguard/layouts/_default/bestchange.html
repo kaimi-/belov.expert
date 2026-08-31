@@ -91,31 +91,17 @@
         </div>
 
         <ol class="audit-steps">
+            {{ range $step := slice 1 2 3 4 5 }}
+            {{ $n := printf "bestchangeStep%d" $step }}
             <li class="audit-step animate-on-scroll">
-                <span class="audit-step-number" aria-hidden="true">1</span>
-                <h3 class="audit-step-title">{{ i18n "bestchangeStep1Title" }}</h3>
-                <p class="audit-step-description">{{ i18n "bestchangeStep1Desc" }}</p>
+                <span class="audit-step-index" aria-hidden="true">{{ printf "%02d" $step }}</span>
+                <div class="audit-step-body">
+                    <span class="audit-step-owner">{{ i18n (printf "%sOwner" $n) }}</span>
+                    <h3 class="audit-step-title">{{ i18n (printf "%sTitle" $n) }}</h3>
+                    <p class="audit-step-description">{{ i18n (printf "%sDesc" $n) (dict "blackBox" $blackBoxOblique) | safeHTML }}</p>
+                </div>
             </li>
-            <li class="audit-step animate-on-scroll">
-                <span class="audit-step-number" aria-hidden="true">2</span>
-                <h3 class="audit-step-title">{{ i18n "bestchangeStep2Title" }}</h3>
-                <p class="audit-step-description">{{ i18n "bestchangeStep2Desc" }}</p>
-            </li>
-            <li class="audit-step animate-on-scroll">
-                <span class="audit-step-number" aria-hidden="true">3</span>
-                <h3 class="audit-step-title">{{ i18n "bestchangeStep3Title" }}</h3>
-                <p class="audit-step-description">{{ i18n "bestchangeStep3Desc" (dict "blackBox" $blackBoxOblique) | safeHTML }}</p>
-            </li>
-            <li class="audit-step animate-on-scroll">
-                <span class="audit-step-number" aria-hidden="true">4</span>
-                <h3 class="audit-step-title">{{ i18n "bestchangeStep4Title" }}</h3>
-                <p class="audit-step-description">{{ i18n "bestchangeStep4Desc" }}</p>
-            </li>
-            <li class="audit-step animate-on-scroll">
-                <span class="audit-step-number" aria-hidden="true">5</span>
-                <h3 class="audit-step-title">{{ i18n "bestchangeStep5Title" }}</h3>
-                <p class="audit-step-description">{{ i18n "bestchangeStep5Desc" }}</p>
-            </li>
+            {{ end }}
         </ol>
     </div>
 </section>
