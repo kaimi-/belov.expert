@@ -153,7 +153,7 @@
 - id: bestchangeProcessTitle
   translation: "How the Audit Works"
 - id: bestchangeProcessSubtitle
-  translation: "Five steps from agreeing the scope to confirming remediation"
+  translation: "Seven steps from agreeing the scope to verification by BestChange"
 
 - id: bestchangeStep1Owner
   translation: "Together"
@@ -184,11 +184,25 @@
   translation: "You receive a report describing every finding with reproduction steps, a risk rating, and specific guidance on how to fix it."
 
 - id: bestchangeStep5Owner
-  translation: "On me"
+  translation: "On you"
 - id: bestchangeStep5Title
-  translation: "Retest"
+  translation: "Remediation"
 - id: bestchangeStep5Desc
+  translation: "You fix the medium, high, and critical risk findings. Low-risk and informational items are left to your discretion."
+
+- id: bestchangeStep6Owner
+  translation: "On me"
+- id: bestchangeStep6Title
+  translation: "Retest"
+- id: bestchangeStep6Desc
   translation: "Once the fixes are in place I re-verify the affected areas and record the result, so the final document confirms the issues are closed."
+
+- id: bestchangeStep7Owner
+  translation: "On you"
+- id: bestchangeStep7Title
+  translation: "BestChange Verification"
+- id: bestchangeStep7Desc
+  translation: "You submit the final report to BestChange for verification."
 
 - id: bestchangeDeliverablesTitle
   translation: "What You Get"

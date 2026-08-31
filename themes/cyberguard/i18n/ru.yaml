@@ -155,7 +155,7 @@
 - id: bestchangeProcessTitle
   translation: "Как проходит аудит"
 - id: bestchangeProcessSubtitle
-  translation: "Пять шагов от согласования границ до подтверждения устранения"
+  translation: "Семь шагов от согласования границ до верификации отчёта в BestChange"
 
 - id: bestchangeStep1Owner
   translation: "Вместе"
@@ -186,11 +186,25 @@
   translation: "Вы получаете отчёт с описанием каждой находки, шагами воспроизведения, оценкой риска и конкретными рекомендациями по устранению."
 
 - id: bestchangeStep5Owner
-  translation: "На мне"
+  translation: "На вас"
 - id: bestchangeStep5Title
-  translation: "Ретест"
+  translation: "Устранение"
 - id: bestchangeStep5Desc
+  translation: "Вы исправляете находки среднего, высокого и критичного уровня риска. Низкий уровень и информационные замечания остаются на ваше усмотрение."
+
+- id: bestchangeStep6Owner
+  translation: "На мне"
+- id: bestchangeStep6Title
+  translation: "Ретест"
+- id: bestchangeStep6Desc
   translation: "После доработок повторно проверяю исправленные места и фиксирую результат, чтобы итоговый документ подтверждал закрытие проблем."
+
+- id: bestchangeStep7Owner
+  translation: "На вас"
+- id: bestchangeStep7Title
+  translation: "Верификация в BestChange"
+- id: bestchangeStep7Desc
+  translation: "Вы отправляете итоговый отчёт в BestChange на верификацию."
 
 - id: bestchangeDeliverablesTitle
   translation: "Что вы получаете"
