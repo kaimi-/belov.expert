@@ -741,6 +741,45 @@ hr {
     opacity: 0.75;
 }
 
+.page-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-bottom: 2.5rem;
+}
+
+.page-header .cyber-badge {
+    margin-bottom: 0;
+    background-color: rgba(255, 255, 255, 0.12);
+    color: inherit;
+}
+
+.page-cta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.page-header .btn-outline {
+    border-color: currentColor;
+    color: inherit;
+}
+
+.page-header .btn-outline:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+    color: inherit;
+}
+
+.page-header a:not(.btn) {
+    color: inherit;
+    text-decoration: underline;
+}
+
+.page-header a:not(.btn):hover {
+    color: inherit;
+    opacity: 0.85;
+}
+
 /* Services Section */
 .services-grid {
     display: grid;
@@ -786,6 +825,25 @@ hr {
 
 .service-description {
     color: var(--color-gray);
+}
+
+.service-card-link {
+    display: block;
+    color: inherit;
+}
+
+.service-card-link:hover {
+    color: inherit;
+}
+
+.service-card-more {
+    display: inline-block;
+    color: var(--color-primary);
+    font-weight: 600;
+}
+
+.service-card-link:hover .service-card-more {
+    color: var(--color-primary-dark);
 }
 
 /* Certifications Section */
@@ -1012,6 +1070,96 @@ hr {
 .view-all-publications {
     margin-top: 3rem;
     text-align: center;
+}
+
+/* BestChange Audit Page */
+.audit-process-section {
+    background-color: var(--color-light);
+}
+
+.audit-steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 2rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.audit-step {
+    background-color: var(--color-white);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    padding: 2rem;
+}
+
+.audit-step-number {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    margin-bottom: 1.5rem;
+    border-radius: 50%;
+    background-color: var(--color-primary);
+    color: #fff;
+    font-weight: 700;
+}
+
+.audit-step-title {
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+}
+
+.audit-step-description {
+    color: var(--color-gray);
+    margin-bottom: 0;
+}
+
+.audit-list {
+    list-style: none;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.audit-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--color-light);
+}
+
+.audit-list li:last-child {
+    border-bottom: 0;
+}
+
+.audit-list svg {
+    flex-shrink: 0;
+    width: 24px;
+    height: 24px;
+    margin-top: 0.125rem;
+    color: var(--color-secondary);
+}
+
+.audit-proof {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: var(--color-white);
+    border-left: 4px solid var(--color-secondary);
+    border-radius: 0 var(--border-radius) var(--border-radius) 0;
+    box-shadow: var(--shadow);
+    font-size: 1.125rem;
+}
+
+.audit-proof p {
+    margin-bottom: 0;
+}
+
+.audit-cta .page-cta {
+    justify-content: center;
 }
 
 /* Contact Section */
@@ -1473,6 +1621,10 @@ textarea.form-control {
     .hero-cta {
         flex-direction: column;
         gap: 1rem;
+    }
+
+    .page-cta {
+        flex-direction: column;
     }
 
     .page-header {

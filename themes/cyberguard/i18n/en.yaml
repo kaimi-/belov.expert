@@ -98,6 +98,108 @@
 - id: mediaStatSince
   translation: "First publication"
 
+# BestChange Audit Page
+- id: asvsName
+  translation: "OWASP ASVS Level 2"
+- id: blackBoxUrl
+  translation: "https://en.wikipedia.org/wiki/Black-box_testing"
+- id: blackBoxName
+  translation: "Black box and grey box"
+- id: blackBoxNameOblique
+  translation: "black-box and grey-box"
+
+- id: bestchangeLead
+  translation: "BestChange requires listed exchange services to confirm an independent security audit. I run that audit against {{ .asvs }} using {{ .blackBox }} testing, deliver a report you can submit to the monitor, and retest once the findings are fixed."
+- id: bestchangeBadgeRetest
+  translation: "Remediation retest"
+- id: bestchangeAskQuestion
+  translation: "Ask a question"
+
+- id: bestchangeScopeTitle
+  translation: "What the Audit Covers"
+- id: bestchangeScopeSubtitle
+  translation: "Coverage follows {{ .asvs }}"
+
+- id: bestchangeScopeAuthTitle
+  translation: "Authentication and Sessions"
+- id: bestchangeScopeAuthDesc
+  translation: "Signup, login, two-factor authentication, session lifecycle, and brute-force protection"
+
+- id: bestchangeScopeAccessTitle
+  translation: "Access Control and Business Logic"
+- id: bestchangeScopeAccessDesc
+  translation: "Authorization boundaries, access to other users' data, skipped exchange steps, and abuse of limits and rates"
+
+- id: bestchangeScopeInputTitle
+  translation: "Input Validation and Injection"
+- id: bestchangeScopeInputDesc
+  translation: "Handling of user-supplied data, injection, file uploads, XSS, and SSRF across exchange forms and orders"
+
+- id: bestchangeScopeCryptoTitle
+  translation: "Cryptography and Data Protection"
+- id: bestchangeScopeCryptoDesc
+  translation: "Storage and transport of personal and KYC data, secret handling, and TLS configuration"
+
+- id: bestchangeScopeConfigTitle
+  translation: "Configuration, Logging, and Errors"
+- id: bestchangeScopeConfigDesc
+  translation: "Server and framework settings, security headers, information leaks in responses, and logging of security-relevant events"
+
+- id: bestchangeScopeApiTitle
+  translation: "APIs and Integrations"
+- id: bestchangeScopeApiDesc
+  translation: "Public and internal APIs, webhooks, payment gateway integrations, and callback handling"
+
+- id: bestchangeProcessTitle
+  translation: "How the Audit Works"
+- id: bestchangeProcessSubtitle
+  translation: "Four steps from agreeing the scope to confirming remediation"
+
+- id: bestchangeStep1Title
+  translation: "Scope and Access"
+- id: bestchangeStep1Desc
+  translation: "We agree on the boundaries, the environment, and the rules of engagement. For grey-box coverage you provide test accounts and a scope estimate: the number of REST API endpoints, the number of roles to test, and a general description of what the service does."
+
+- id: bestchangeStep2Title
+  translation: "Testing"
+- id: bestchangeStep2Desc
+  translation: "I audit the security of the service using {{ .blackBox }} testing. Critical findings are reported immediately, without waiting for the report."
+
+- id: bestchangeStep3Title
+  translation: "Report"
+- id: bestchangeStep3Desc
+  translation: "You receive a report describing every finding with reproduction steps, a risk rating, and specific guidance on how to fix it."
+
+- id: bestchangeStep4Title
+  translation: "Retest"
+- id: bestchangeStep4Desc
+  translation: "Once the fixes are in place I re-verify the affected areas and record the result, so the final document confirms the issues are closed."
+
+- id: bestchangeDeliverablesTitle
+  translation: "What You Get"
+- id: bestchangeDeliverablesSubtitle
+  translation: "Documents and an outcome"
+- id: bestchangeDeliverableReport
+  translation: "An audit report that meets BestChange requirements"
+- id: bestchangeDeliverableFindings
+  translation: "Every finding described with reproduction steps and a risk rating"
+- id: bestchangeDeliverableGuidance
+  translation: "Specific remediation guidance — what to change and how"
+- id: bestchangeDeliverableRetest
+  translation: "A retest of the fixes and a final document confirming that the issues are closed"
+- id: bestchangeDeliverableSupport
+  translation: "Answers for your development team while the fixes are in progress"
+
+- id: bestchangeProofTitle
+  translation: "Track Record"
+- id: bestchangeProofText
+  translation: "Every service I have audited passed the BestChange requirement with my report. Not one was rejected over the quality or completeness of the report."
+
+- id: bestchangeCtaTitle
+  translation: "Discuss Your Audit"
+- id: bestchangeCtaText
+  translation: "Message me or book a short call — we will go over your service, the scope of the audit, and the timeline."
+
 # Certifications Section
 - id: certifications
   translation: "Certifications"

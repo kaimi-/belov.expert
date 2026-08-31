@@ -100,6 +100,108 @@
 - id: mediaStatSince
   translation: "Первая публикация"
 
+# BestChange Audit Page
+- id: asvsName
+  translation: "OWASP ASVS Level 2"
+- id: blackBoxUrl
+  translation: "https://ru.wikipedia.org/wiki/%D0%A2%D0%B5%D1%81%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5_%D0%BF%D0%BE_%D1%81%D1%82%D1%80%D0%B0%D1%82%D0%B5%D0%B3%D0%B8%D0%B8_%D1%87%D1%91%D1%80%D0%BD%D0%BE%D0%B3%D0%BE_%D1%8F%D1%89%D0%B8%D0%BA%D0%B0"
+- id: blackBoxName
+  translation: "Чёрный и серый ящик"
+- id: blackBoxNameOblique
+  translation: "чёрного и серого ящика"
+
+- id: bestchangeLead
+  translation: "BestChange требует от обменных сервисов подтверждённого независимого аудита безопасности. Провожу такой аудит на соответствие {{ .asvs }} методом {{ .blackBox }}, готовлю отчёт, который можно предъявить мониторингу, и после доработок проверяю устранение повторно."
+- id: bestchangeBadgeRetest
+  translation: "Ретест устранения"
+- id: bestchangeAskQuestion
+  translation: "Задать вопрос"
+
+- id: bestchangeScopeTitle
+  translation: "Что проверяю"
+- id: bestchangeScopeSubtitle
+  translation: "Покрытие соответствует {{ .asvs }}"
+
+- id: bestchangeScopeAuthTitle
+  translation: "Аутентификация и сессии"
+- id: bestchangeScopeAuthDesc
+  translation: "Регистрация, вход, двухфакторная аутентификация, жизненный цикл сессий и защита от перебора"
+
+- id: bestchangeScopeAccessTitle
+  translation: "Управление доступом и бизнес-логика"
+- id: bestchangeScopeAccessDesc
+  translation: "Разграничение прав, доступ к данным других пользователей, обход шагов обмена, злоупотребление лимитами и курсами"
+
+- id: bestchangeScopeInputTitle
+  translation: "Валидация ввода и инъекции"
+- id: bestchangeScopeInputDesc
+  translation: "Обработка пользовательских данных, инъекции, загрузка файлов, XSS и SSRF в формах обмена и заявках"
+
+- id: bestchangeScopeCryptoTitle
+  translation: "Криптография и защита данных"
+- id: bestchangeScopeCryptoDesc
+  translation: "Хранение и передача персональных данных и данных KYC, работа с секретами и настройка TLS"
+
+- id: bestchangeScopeConfigTitle
+  translation: "Конфигурация, логирование и ошибки"
+- id: bestchangeScopeConfigDesc
+  translation: "Настройки сервера и фреймворка, заголовки безопасности, утечки данных в ответах и полнота логов значимых событий"
+
+- id: bestchangeScopeApiTitle
+  translation: "API и интеграции"
+- id: bestchangeScopeApiDesc
+  translation: "Публичные и внутренние API, вебхуки, интеграции с платёжными шлюзами и обработка колбэков"
+
+- id: bestchangeProcessTitle
+  translation: "Как проходит аудит"
+- id: bestchangeProcessSubtitle
+  translation: "Четыре шага от согласования границ до подтверждения устранения"
+
+- id: bestchangeStep1Title
+  translation: "Скоуп и доступы"
+- id: bestchangeStep1Desc
+  translation: "Согласуем границы проверки, окружение и правила тестирования. Для серого ящика вы готовите тестовые учётные записи и оценку объёма: число REST API эндпоинтов, количество тестируемых ролей и общее описание функциональности сервиса."
+
+- id: bestchangeStep2Title
+  translation: "Тестирование"
+- id: bestchangeStep2Desc
+  translation: "Провожу аудит безопасности сервиса методом {{ .blackBox }}. О критичных находках сообщаю сразу, не дожидаясь отчёта."
+
+- id: bestchangeStep3Title
+  translation: "Отчёт"
+- id: bestchangeStep3Desc
+  translation: "Вы получаете отчёт с описанием каждой находки, шагами воспроизведения, оценкой риска и конкретными рекомендациями по устранению."
+
+- id: bestchangeStep4Title
+  translation: "Ретест"
+- id: bestchangeStep4Desc
+  translation: "После доработок повторно проверяю исправленные места и фиксирую результат, чтобы итоговый документ подтверждал закрытие проблем."
+
+- id: bestchangeDeliverablesTitle
+  translation: "Что вы получаете"
+- id: bestchangeDeliverablesSubtitle
+  translation: "Документы и результат"
+- id: bestchangeDeliverableReport
+  translation: "Отчёт об аудите, соответствующий требованиям BestChange"
+- id: bestchangeDeliverableFindings
+  translation: "Описание каждой находки с шагами воспроизведения и оценкой риска"
+- id: bestchangeDeliverableGuidance
+  translation: "Конкретные рекомендации по устранению — что и как менять"
+- id: bestchangeDeliverableRetest
+  translation: "Повторную проверку устранения и итоговый документ с подтверждением, что проблемы закрыты"
+- id: bestchangeDeliverableSupport
+  translation: "Ответы на вопросы вашей команды разработки в процессе исправления"
+
+- id: bestchangeProofTitle
+  translation: "Опыт прохождения требования"
+- id: bestchangeProofText
+  translation: "Все сервисы, которые я аудировал, прошли требование BestChange с моим отчётом. Ни одного отказа из-за качества или полноты отчёта не было."
+
+- id: bestchangeCtaTitle
+  translation: "Обсудить аудит"
+- id: bestchangeCtaText
+  translation: "Напишите или запланируйте короткий созвон — обсудим сервис, границы проверки и сроки."
+
 # Certifications Section
 - id: certifications
   translation: "Сертификаты"

@@ -1,0 +1,162 @@
+{{ define "main" }}
+{{ $externalLink := `<a href="%s" target="_blank" rel="noopener noreferrer">%s</a>` }}
+{{ $blackBoxURL := i18n "blackBoxUrl" }}
+{{ $asvs := printf $externalLink "https://owasp.org/www-project-application-security-verification-standard/" (i18n "asvsName") }}
+{{ $blackBox := printf $externalLink $blackBoxURL (i18n "blackBoxName") }}
+{{ $blackBoxOblique := printf $externalLink $blackBoxURL (i18n "blackBoxNameOblique") }}
+
+<section class="page-header">
+    <div class="hero-background"></div>
+    <div class="container">
+        <h1>{{ .Title }}</h1>
+        <p class="page-lead">{{ i18n "bestchangeLead" (dict "asvs" $asvs "blackBox" $blackBoxOblique) | safeHTML }}</p>
+
+        <div class="page-badges">
+            <span class="cyber-badge">{{ $asvs | safeHTML }}</span>
+            <span class="cyber-badge">{{ $blackBox | safeHTML }}</span>
+            <span class="cyber-badge">{{ i18n "bestchangeBadgeRetest" }}</span>
+        </div>
+
+        <div class="page-cta">
+            <a href="{{ .Site.Params.calendly }}" target="_blank" rel="noopener" class="btn btn-primary">{{ i18n "bookMeeting" }}</a>
+            <a href="{{ .Site.Params.social.telegram }}" target="_blank" rel="noopener" class="btn btn-outline">{{ i18n "bestchangeAskQuestion" }}</a>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <div class="section-title">
+            <h2>{{ i18n "bestchangeScopeTitle" }}</h2>
+            <p>{{ i18n "bestchangeScopeSubtitle" (dict "asvs" $asvs) | safeHTML }}</p>
+        </div>
+
+        <div class="services-grid">
+            <div class="service-card animate-on-scroll">
+                <div class="service-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                </div>
+                <h3 class="service-title">{{ i18n "bestchangeScopeAuthTitle" }}</h3>
+                <p class="service-description">{{ i18n "bestchangeScopeAuthDesc" }}</p>
+            </div>
+
+            <div class="service-card animate-on-scroll">
+                <div class="service-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                </div>
+                <h3 class="service-title">{{ i18n "bestchangeScopeAccessTitle" }}</h3>
+                <p class="service-description">{{ i18n "bestchangeScopeAccessDesc" }}</p>
+            </div>
+
+            <div class="service-card animate-on-scroll">
+                <div class="service-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+                </div>
+                <h3 class="service-title">{{ i18n "bestchangeScopeInputTitle" }}</h3>
+                <p class="service-description">{{ i18n "bestchangeScopeInputDesc" }}</p>
+            </div>
+
+            <div class="service-card animate-on-scroll">
+                <div class="service-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><path d="m9 12 2 2 4-4"></path></svg>
+                </div>
+                <h3 class="service-title">{{ i18n "bestchangeScopeCryptoTitle" }}</h3>
+                <p class="service-description">{{ i18n "bestchangeScopeCryptoDesc" }}</p>
+            </div>
+
+            <div class="service-card animate-on-scroll">
+                <div class="service-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                </div>
+                <h3 class="service-title">{{ i18n "bestchangeScopeConfigTitle" }}</h3>
+                <p class="service-description">{{ i18n "bestchangeScopeConfigDesc" }}</p>
+            </div>
+
+            <div class="service-card animate-on-scroll">
+                <div class="service-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+                </div>
+                <h3 class="service-title">{{ i18n "bestchangeScopeApiTitle" }}</h3>
+                <p class="service-description">{{ i18n "bestchangeScopeApiDesc" }}</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section audit-process-section">
+    <div class="container">
+        <div class="section-title">
+            <h2>{{ i18n "bestchangeProcessTitle" }}</h2>
+            <p>{{ i18n "bestchangeProcessSubtitle" }}</p>
+        </div>
+
+        <ol class="audit-steps">
+            <li class="audit-step animate-on-scroll">
+                <span class="audit-step-number" aria-hidden="true">1</span>
+                <h3 class="audit-step-title">{{ i18n "bestchangeStep1Title" }}</h3>
+                <p class="audit-step-description">{{ i18n "bestchangeStep1Desc" }}</p>
+            </li>
+            <li class="audit-step animate-on-scroll">
+                <span class="audit-step-number" aria-hidden="true">2</span>
+                <h3 class="audit-step-title">{{ i18n "bestchangeStep2Title" }}</h3>
+                <p class="audit-step-description">{{ i18n "bestchangeStep2Desc" (dict "blackBox" $blackBoxOblique) | safeHTML }}</p>
+            </li>
+            <li class="audit-step animate-on-scroll">
+                <span class="audit-step-number" aria-hidden="true">3</span>
+                <h3 class="audit-step-title">{{ i18n "bestchangeStep3Title" }}</h3>
+                <p class="audit-step-description">{{ i18n "bestchangeStep3Desc" }}</p>
+            </li>
+            <li class="audit-step animate-on-scroll">
+                <span class="audit-step-number" aria-hidden="true">4</span>
+                <h3 class="audit-step-title">{{ i18n "bestchangeStep4Title" }}</h3>
+                <p class="audit-step-description">{{ i18n "bestchangeStep4Desc" }}</p>
+            </li>
+        </ol>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <div class="section-title">
+            <h2>{{ i18n "bestchangeDeliverablesTitle" }}</h2>
+            <p>{{ i18n "bestchangeDeliverablesSubtitle" }}</p>
+        </div>
+
+        <ul class="audit-list">
+            {{ range slice "bestchangeDeliverableReport" "bestchangeDeliverableFindings" "bestchangeDeliverableGuidance" "bestchangeDeliverableRetest" "bestchangeDeliverableSupport" }}
+            <li>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                <span>{{ i18n . }}</span>
+            </li>
+            {{ end }}
+        </ul>
+    </div>
+</section>
+
+<section class="section audit-process-section">
+    <div class="container">
+        <div class="section-title">
+            <h2>{{ i18n "bestchangeProofTitle" }}</h2>
+        </div>
+
+        <div class="audit-proof">
+            <p>{{ i18n "bestchangeProofText" }}</p>
+        </div>
+    </div>
+</section>
+
+<section class="section audit-cta">
+    <div class="container">
+        <div class="section-title">
+            <h2>{{ i18n "bestchangeCtaTitle" }}</h2>
+            <p>{{ i18n "bestchangeCtaText" }}</p>
+        </div>
+
+        <div class="page-cta">
+            <a href="{{ .Site.Params.calendly }}" target="_blank" rel="noopener" class="btn btn-primary btn-lg">{{ i18n "bookMeeting" }}</a>
+            <a href="{{ .Site.Params.social.telegram }}" target="_blank" rel="noopener" class="btn btn-outline btn-lg">{{ .Site.Params.contact.telegram }}</a>
+            <a href="mailto:{{ .Site.Params.contact.email }}" class="btn btn-outline btn-lg">{{ .Site.Params.contact.email }}</a>
+        </div>
+    </div>
+</section>
+{{ end }}
