@@ -109,7 +109,7 @@
   translation: "black-box and grey-box"
 
 - id: bestchangeLead
-  translation: "BestChange requires listed exchange services to confirm an independent security audit. I run that audit against {{ .asvs }} using {{ .blackBox }} testing, deliver a report you can submit to the monitor, and retest once the findings are fixed."
+  translation: "BestChange requires listed exchange services to confirm an independent security audit. I run that audit against {{ .asvs }} using {{ .blackBox }} testing, deliver a report you can submit to BestChange, and retest once the findings are fixed."
 - id: bestchangeBadgeRetest
   translation: "Remediation retest"
 - id: bestchangeAskQuestion
