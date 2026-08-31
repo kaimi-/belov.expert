@@ -2,7 +2,6 @@
 {{ $externalLink := `<a href="%s" target="_blank" rel="noopener noreferrer">%s</a>` }}
 {{ $blackBoxURL := i18n "blackBoxUrl" }}
 {{ $asvs := printf $externalLink "https://owasp.org/www-project-application-security-verification-standard/" (i18n "asvsName") }}
-{{ $blackBox := printf $externalLink $blackBoxURL (i18n "blackBoxName") }}
 {{ $blackBoxOblique := printf $externalLink $blackBoxURL (i18n "blackBoxNameOblique") }}
 
 <section class="page-header">
@@ -12,8 +11,8 @@
         <p class="page-lead">{{ i18n "bestchangeLead" (dict "asvs" $asvs "blackBox" $blackBoxOblique) | safeHTML }}</p>
 
         <div class="page-badges">
-            <span class="cyber-badge">{{ $asvs | safeHTML }}</span>
-            <span class="cyber-badge">{{ $blackBox | safeHTML }}</span>
+            <span class="cyber-badge">{{ i18n "asvsName" }}</span>
+            <span class="cyber-badge">{{ i18n "blackBoxName" }}</span>
             <span class="cyber-badge">{{ i18n "bestchangeBadgeRetest" }}</span>
         </div>
 
