@@ -165,7 +165,7 @@
 - id: bestchangeStep2Title
   translation: "Тестирование"
 - id: bestchangeStep2Desc
-  translation: "Провожу аудит безопасности сервиса методом {{ .blackBox }}. О критичных находках сообщаю сразу, не дожидаясь отчёта."
+  translation: "Провожу аудит безопасности сервиса методом {{ .blackBox }}. О критичных находках сообщаю сразу, по факту обнаружения."
 
 - id: bestchangeStep3Title
   translation: "Отчёт"

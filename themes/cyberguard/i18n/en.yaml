@@ -163,7 +163,7 @@
 - id: bestchangeStep2Title
   translation: "Testing"
 - id: bestchangeStep2Desc
-  translation: "I audit the security of the service using {{ .blackBox }} testing. Critical findings are reported immediately, without waiting for the report."
+  translation: "I audit the security of the service using {{ .blackBox }} testing. I report critical findings as soon as I find them."
 
 - id: bestchangeStep3Title
   translation: "Report"
