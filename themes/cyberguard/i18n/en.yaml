@@ -195,7 +195,7 @@
 - id: bestchangeStep6Title
   translation: "Retest"
 - id: bestchangeStep6Desc
-  translation: "Once the fixes are in place I re-verify the affected areas and record the result, so the final document confirms the issues are closed."
+  translation: "I re-verify the affected areas and record the result in the final document, which confirms the issues are closed."
 
 - id: bestchangeStep7Owner
   translation: "On you"
