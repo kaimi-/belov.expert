@@ -1,5 +1,5 @@
 baseURL: "https://belov.expert/"
-languageCode: "en-us"
+locale: "en-us"
 title: "Sergey Belov | Cybersecurity Expert"
 theme: "cyberguard"
 
@@ -20,7 +20,7 @@ defaultContentLanguageInSubdir: false
 # Language configuration
 languages:
   en:
-    languageName: "English"
+    label: "English"
     weight: 1
     title: "Sergey Belov | Cybersecurity Expert"
     params:
@@ -35,7 +35,7 @@ languages:
         - "Reverse engineering"
         - "Secure software development lifecycle"
   ru:
-    languageName: "Русский"
+    label: "Русский"
     weight: 2
     title: "Сергей Белов | Эксперт по кибербезопасности"
     params:

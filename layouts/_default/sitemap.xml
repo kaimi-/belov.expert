@@ -24,13 +24,13 @@
     {{- range .Translations }}
     <xhtml:link
                 rel="alternate"
-                hreflang="{{ .Language.Lang }}"
+                hreflang="{{ .Language.Name }}"
                 href="{{ .Permalink }}"
                 />
     {{- end }}
     <xhtml:link
                 rel="alternate"
-                hreflang="{{ .Language.Lang }}"
+                hreflang="{{ .Language.Name }}"
                 href="{{ .Permalink }}"
                 />
     {{- end }}

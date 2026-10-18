@@ -1,6 +1,6 @@
 {{- $person := .Site.Params.person -}}
 {{- $social := .Site.Params.social -}}
-{{- $lang := .Site.Language.Lang -}}
+{{- $lang := .Site.Language.Name -}}
 {{- $base := .Site.BaseURL -}}
 
 {{- $personID := printf "%s#person" $base -}}
@@ -70,7 +70,7 @@
     {{- $pageNode = merge $pageNode (dict "@type" "ProfilePage" "mainEntity" (dict "@id" $personID)) -}}
 {{- else if .Params.schemaPublications -}}
     {{- $listItems := slice -}}
-    {{- range $index, $publication := index .Site.Data $lang "publications" -}}
+    {{- range $index, $publication := index hugo.Data $lang "publications" -}}
         {{- $article := dict
             "@type" "NewsArticle"
             "url" $publication.url

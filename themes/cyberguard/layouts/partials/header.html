@@ -33,7 +33,7 @@
                     {{ if .IsTranslated }}
                     <li class="language-switcher">
                         <div class="lang-switch-button">
-                            {{ $currentLang := .Site.Language.Lang }}
+                            {{ $currentLang := .Site.Language.Name }}
                             {{ range .Translations }}
                                 {{ if eq $currentLang "en" }}
                                 <a href="{{ .Permalink }}" class="btn btn-outline btn-lang">EN / <span class="lang-alt">RU</span></a>

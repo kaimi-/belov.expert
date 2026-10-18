@@ -1,5 +1,5 @@
 {{ define "main" }}
-{{ $publications := index .Site.Data .Site.Language.Lang "publications" }}
+{{ $publications := index hugo.Data .Site.Language.Name "publications" }}
 {{ $outlets := slice }}
 {{ $years := slice }}
 {{ range $publications }}

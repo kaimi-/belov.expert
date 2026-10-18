@@ -110,7 +110,7 @@
         </div>
         
         <div class="portfolio-grid">
-            {{ $portfolio := index .Site.Data .Site.Language.Lang "portfolio" }}
+            {{ $portfolio := index hugo.Data .Site.Language.Name "portfolio" }}
             {{ range $portfolio }}
             <div class="portfolio-card animate-on-scroll">
                 <a href="{{ .url }}" target="_blank" rel="noopener" class="portfolio-link">
@@ -137,7 +137,7 @@
         
         <div class="publications-wrapper">
             <div class="publications-grid">
-                {{ $publications := index .Site.Data .Site.Language.Lang "publications" }}
+                {{ $publications := index hugo.Data .Site.Language.Name "publications" }}
                 {{ $defaultDisplay := default 6 .Site.Params.publications.defaultDisplay }}
                 {{ range first $defaultDisplay $publications }}
                 {{ partial "publication-card.html" . }}

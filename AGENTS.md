@@ -19,7 +19,7 @@ The site uses plain Hugo templates, CSS, and browser JavaScript. There is no fro
 - `data/{en,ru}/publications.yaml`: localized publication lists.
 - `static/`: files copied to the site root unchanged. Reference `static/images/foo.webp` as `images/foo.webp`, never with a `static/` prefix.
 - `layouts/_default/sitemap.xml`: project-level sitemap override. It takes precedence over `themes/cyberguard/layouts/_default/sitemap.xml` in Hugo's lookup order.
-- `.github/workflows/hugo.yml`: production build and GitHub Pages deployment. CI currently pins Hugo Extended `0.165.0`.
+- `.github/workflows/hugo.yml`: production build and GitHub Pages deployment. CI currently pins Hugo Extended `0.168.0`.
 
 Generated directories such as `public/` and `resources/`, plus `node_modules/`, are not source files and must not be edited or committed.
 
@@ -98,7 +98,7 @@ Do not use `npm run format` for a focused task because it rewrites many file typ
 
 ## Validation checklist
 
-1. Run `npm run build` and distinguish new errors from the known baseline deprecation warnings for `languageCode`, `languageName`, and `.Site.Data` on Hugo 0.165.0.
+1. Run `npm run build` with Hugo Extended 0.168.0 and confirm that it completes without warnings or errors.
 2. For template, content, or localization changes, inspect both the English `/` output and Russian `/ru/` output.
 3. For UI changes, check desktop and mobile layouts, light and dark themes, keyboard interaction, and the browser console.
 4. For data or asset changes, verify referenced files and links and confirm ordering in the rendered section.
