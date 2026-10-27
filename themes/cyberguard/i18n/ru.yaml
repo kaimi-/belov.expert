@@ -11,6 +11,8 @@
   translation: "Экспертиза кибербезопасности для вашего бизнеса"
 - id: name
   translation: "Сергей Белов"
+- id: skipToContent
+  translation: "Перейти к содержимому"
 
 # Header
 - id: home
@@ -39,6 +41,8 @@
   translation: "Запланировать встречу"
 - id: cybersecurityExpert
   translation: "Эксперт по кибербезопасности"
+- id: tagline
+  translation: "Атакующему достаточно одной пропущенной уязвимости. Я нахожу её первым и показываю команде, как её закрыть."
 
 
 # Services Section

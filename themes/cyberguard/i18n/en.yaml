@@ -11,6 +11,8 @@
   translation: "Enterprise cybersecurity expertise for your organization"
 - id: name
   translation: "Sergey Belov"
+- id: skipToContent
+  translation: "Skip to content"
 
 # Header
 - id: home
@@ -39,6 +41,8 @@
   translation: "Book a Meeting"
 - id: cybersecurityExpert
   translation: "Cybersecurity Expert"
+- id: tagline
+  translation: "Attackers need one gap you missed. I find it first and show your team how to close it."
 
 # Services Section
 - id: services
